@@ -1,6 +1,7 @@
 @echo off
 chcp 65001 >nul
 title 🐛 后端服务 [端口8000]
+set PROJECT_DIR=%~dp0..
 echo ============================================
 echo         启动病虫害智能诊断系统 - 后端服务
 echo ============================================
@@ -27,7 +28,7 @@ echo 端口: %PORT%
 echo ============================================
 echo.
 
-cd /d "%~dp0"
+cd /d "%PROJECT_DIR%"
 python -m uvicorn backend.main:app --host 0.0.0.0 --port %PORT%
 
 pause

@@ -1,6 +1,7 @@
 @echo off
 chcp 65001 >nul
 title 🌾 前端服务 [端口5174]
+set PROJECT_DIR=%~dp0..
 echo ============================================
 echo         启动病虫害智能诊断系统 - 前端服务
 echo ============================================
@@ -27,7 +28,7 @@ echo 端口: %PORT%
 echo ============================================
 echo.
 
-cd /d "%~dp0frontend"
+cd /d "%PROJECT_DIR%\frontend"
 npm run dev -- --port %PORT%
 
 pause
