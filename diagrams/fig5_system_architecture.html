@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mermaid Diagram</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        body { margin: 0; padding: 20px; background: white; }
+        .mermaid { max-width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="mermaid">graph TB
+    subgraph 前端界面[前端界面 - Vue 3 + Element Plus]
+        A1[导航栏]
+        A2[图像上传区域]
+        A3[识别结果展示]
+        A4[诊断报告卡片]
+        A5[智能问答对话框]
+        A6[知识图谱可视化]
+    end
+    
+    subgraph 后端服务[后端服务 - FastAPI]
+        B1[认证模块<br/>JWT+bcrypt]
+        B2[用户管理模块]
+        B3[图像识别模块]
+        B4[RAG诊断模块]
+        B5[知识图谱模块]
+    end
+    
+    subgraph AI推理服务[AI推理服务 - FastAPI]
+        C1[LSNet-CBAM模型]
+        C2[PyTorch推理引擎]
+        C3[CUDA加速]
+    end
+    
+    subgraph 数据存储[数据存储]
+        D1[SQLite/PostgreSQL<br/>用户数据]
+        D2[Neo4j<br/>知识图谱]
+        D3[本地知识库<br/>结构化病害知识]
+        D4[文件存储<br/>上传图像]
+    end
+    
+    A1 --> B1
+    A2 --> B3
+    A3 --> B3
+    A4 --> B4
+    A5 --> B4
+    A6 --> B5
+    
+    B1 --> D1
+    B2 --> D1
+    B3 --> C1
+    B4 --> D2
+    B4 --> D3
+    B5 --> D2
+    B3 --> D4
+    
+    C1 --> C2 --> C3
+    
+    style A1 fill:#E3F2FD,stroke:#1976D2,stroke-width:2px;
+    style A2 fill:#E3F2FD,stroke:#1976D2,stroke-width:2px;
+    style A3 fill:#E3F2FD,stroke:#1976D2,stroke-width:2px;
+    style A4 fill:#E3F2FD,stroke:#1976D2,stroke-width:2px;
+    style A5 fill:#E3F2FD,stroke:#1976D2,stroke-width:2px;
+    style A6 fill:#E3F2FD,stroke:#1976D2,stroke-width:2px;
+    
+    style B1 fill:#E8F5E9,stroke:#388E3C,stroke-width:2px;
+    style B2 fill:#E8F5E9,stroke:#388E3C,stroke-width:2px;
+    style B3 fill:#E8F5E9,stroke:#388E3C,stroke-width:2px;
+    style B4 fill:#E8F5E9,stroke:#388E3C,stroke-width:2px;
+    style B5 fill:#E8F5E9,stroke:#388E3C,stroke-width:2px;
+    
+    style C1 fill:#FCE4EC,stroke:#C2185B,stroke-width:2px;
+    style C2 fill:#FCE4EC,stroke:#C2185B,stroke-width:2px;
+    style C3 fill:#FCE4EC,stroke:#C2185B,stroke-width:2px;
+    
+    style D1 fill:#FFF3E0,stroke:#F57C00,stroke-width:2px;
+    style D2 fill:#FFF3E0,stroke:#F57C00,stroke-width:2px;
+    style D3 fill:#FFF3E0,stroke:#F57C00,stroke-width:2px;
+    style D4 fill:#FFF3E0,stroke:#F57C00,stroke-width:2px;</div>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+</body>
+</html>

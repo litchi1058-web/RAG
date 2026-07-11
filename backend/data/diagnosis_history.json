@@ -1,0 +1,32 @@
+[
+  {
+    "diagnosis_id": "DIAG-20240115-001",
+    "diagnosis_time": "2024-01-15T10:30:00",
+    "crop_type": "苹果",
+    "disease_result": "苹果_黑星病_一般",
+    "confidence": 0.85,
+    "image_path": "/uploads/apple_1.jpg",
+    "report_summary": "诊断结果：苹果黑星病（一般程度）。",
+    "status": "已处理"
+  },
+  {
+    "diagnosis_id": "DIAG-20240115-002",
+    "diagnosis_time": "2024-01-15T11:20:00",
+    "crop_type": "樱桃",
+    "disease_result": "樱桃_白粉病_严重",
+    "confidence": 0.92,
+    "image_path": "/uploads/cherry_1.jpg",
+    "report_summary": "诊断结果：樱桃白粉病（严重程度）。",
+    "status": "待处理"
+  },
+  {
+    "diagnosis_id": "DIAG-20240114-001",
+    "diagnosis_time": "2024-01-14T14:45:00",
+    "crop_type": "苹果",
+    "disease_result": "苹果_健康",
+    "confidence": 0.98,
+    "image_path": "/uploads/apple_healthy.jpg",
+    "report_summary": "诊断结果：健康。",
+    "status": "已完成"
+  }
+]

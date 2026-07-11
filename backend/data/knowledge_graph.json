@@ -1,0 +1,4068 @@
+{
+  "nodes": [
+    {
+      "id": "crop_苹果",
+      "name": "苹果",
+      "category": "crop"
+    },
+    {
+      "id": "crop_樱桃",
+      "name": "樱桃",
+      "category": "crop"
+    },
+    {
+      "id": "type_真菌性病害",
+      "name": "真菌性病害",
+      "category": "disease_type"
+    },
+    {
+      "id": "type_细菌性病害",
+      "name": "细菌性病害",
+      "category": "disease_type"
+    },
+    {
+      "id": "type_病毒性病害",
+      "name": "病毒性病害",
+      "category": "disease_type"
+    },
+    {
+      "id": "disease_樱桃_健康",
+      "name": "樱桃健康植株",
+      "category": "disease"
+    },
+    {
+      "id": "s_2316",
+      "name": "叶片翠绿厚实、叶面光洁无任何病斑霉点穿孔",
+      "category": "symptom"
+    },
+    {
+      "id": "s_38819",
+      "name": "果实表皮光洁饱满、果形端正、无畸形无腐烂无褐斑",
+      "category": "symptom"
+    },
+    {
+      "id": "s_27144",
+      "name": "新梢萌发整齐健壮、枝条木质化程度高、长势均衡",
+      "category": "symptom"
+    },
+    {
+      "id": "s_62375",
+      "name": "花芽饱满充实、开花坐果正常稳得住",
+      "category": "symptom"
+    },
+    {
+      "id": "s_20103",
+      "name": "全园树势整体稳定、无萎蔫无黄叶无枯枝",
+      "category": "symptom"
+    },
+    {
+      "id": "c_63729",
+      "name": "园区常年栽培管理精细化标准化作业",
+      "category": "cause"
+    },
+    {
+      "id": "c_5276",
+      "name": "果园通风透光条件优良、田间小气候适宜果树生长",
+      "category": "cause"
+    },
+    {
+      "id": "c_73250",
+      "name": "水肥供给科学均衡、有机肥与微量元素搭配合理",
+      "category": "cause"
+    },
+    {
+      "id": "t_68522",
+      "name": "长期保持现有常规标准化田间管护流程不变",
+      "category": "treatment"
+    },
+    {
+      "id": "t_21728",
+      "name": "常态化定期巡查果园，精准记录果树生长状态变化",
+      "category": "treatment"
+    },
+    {
+      "id": "t_26828",
+      "name": "维持现有科学水肥供给节奏，不盲目追肥浇水",
+      "category": "treatment"
+    },
+    {
+      "id": "disease_樱桃_白粉病",
+      "name": "樱桃白粉病",
+      "category": "disease"
+    },
+    {
+      "id": "s_16038",
+      "name": "叶面表层覆盖轻薄白色粉状物，霉层均匀不厚重",
+      "category": "symptom"
+    },
+    {
+      "id": "s_37874",
+      "name": "嫩叶轻度卷曲皱缩，叶片光泽度明显下降变暗发灰",
+      "category": "symptom"
+    },
+    {
+      "id": "s_63421",
+      "name": "新生嫩梢发白褪绿，长势偏弱、新梢徒长细弱",
+      "category": "symptom"
+    },
+    {
+      "id": "s_16453",
+      "name": "全园仅零星单株单枝发病，无连片大面积侵染",
+      "category": "symptom"
+    },
+    {
+      "id": "s_9127",
+      "name": "暂未危害花芽花器幼果，花果发育生长不受影响",
+      "category": "symptom"
+    },
+    {
+      "id": "c_65378",
+      "name": "果园枝条枝叶过密郁闭，通风透光条件差田间湿度偏高",
+      "category": "cause"
+    },
+    {
+      "id": "c_85532",
+      "name": "春季昼夜温差大，夜间结露时间长叶面长期潮湿结露",
+      "category": "cause"
+    },
+    {
+      "id": "c_15381",
+      "name": "果树偏施速效氮肥，新梢徒长嫩弱，抗病抗逆能力下降",
+      "category": "cause"
+    },
+    {
+      "id": "t_69035",
+      "name": "当天人工摘除所有初发病叶、轻微病梢，带出果园集中深埋销毁",
+      "category": "treatment"
+    },
+    {
+      "id": "t_81849",
+      "name": "及时疏除内膛过密枝条、徒长枝条，增加通风透光降湿",
+      "category": "treatment"
+    },
+    {
+      "id": "t_7270",
+      "name": "摘除病叶后24小时内全园统一喷施保护性+治疗性杀菌剂",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_23248",
+      "name": "三唑酮",
+      "category": "chemical"
+    },
+    {
+      "id": "ch_14598",
+      "name": "腈菌唑",
+      "category": "chemical"
+    },
+    {
+      "id": "s_22250",
+      "name": "全树叶片厚层白色白粉霉层全覆盖，叶面完全失绿发白",
+      "category": "symptom"
+    },
+    {
+      "id": "s_64572",
+      "name": "叶片发黄焦枯、干枯卷曲，大量叶片提前脱落",
+      "category": "symptom"
+    },
+    {
+      "id": "s_65549",
+      "name": "嫩梢畸形枯萎坏死，新梢停长萎缩不长",
+      "category": "symptom"
+    },
+    {
+      "id": "s_57986",
+      "name": "花芽花器染病坏死，坐果率极低，幼果畸形腐烂脱落",
+      "category": "symptom"
+    },
+    {
+      "id": "s_9013",
+      "name": "全园树势快速衰退，果树整体萎靡长势极差",
+      "category": "symptom"
+    },
+    {
+      "id": "c_70939",
+      "name": "病害初发期防治严重延误，错过最佳黄金防控窗口期",
+      "category": "cause"
+    },
+    {
+      "id": "c_55509",
+      "name": "果园常年白粉病菌源积累量大，越冬基数高年初侵染压力大",
+      "category": "cause"
+    },
+    {
+      "id": "c_46641",
+      "name": "果树枝叶郁闭极度不通风透光，田间小环境极适宜发病",
+      "category": "cause"
+    },
+    {
+      "id": "t_69161",
+      "name": "彻底全园剪除所有重度病枝、病梢、病叶，不留带病组织",
+      "category": "treatment"
+    },
+    {
+      "id": "t_29950",
+      "name": "病残枝叶全部集中带出果园焚烧销毁，杜绝二次侵染源",
+      "category": "treatment"
+    },
+    {
+      "id": "t_50851",
+      "name": "全园高强度强效药剂封锁喷施，快速杀灭全域病菌",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_29750",
+      "name": "氟硅唑",
+      "category": "chemical"
+    },
+    {
+      "id": "ch_31459",
+      "name": "戊唑醇",
+      "category": "chemical"
+    },
+    {
+      "id": "disease_苹果_健康",
+      "name": "苹果健康植株",
+      "category": "disease"
+    },
+    {
+      "id": "s_81255",
+      "name": "叶片完整浓绿厚实，无病斑、无穿孔、无发黄脱落",
+      "category": "symptom"
+    },
+    {
+      "id": "s_5351",
+      "name": "果实光洁饱满，无霉点、无黑斑、无畸形腐烂",
+      "category": "symptom"
+    },
+    {
+      "id": "s_71659",
+      "name": "新梢生长整齐健壮，树体长势均衡稳定",
+      "category": "symptom"
+    },
+    {
+      "id": "c_37665",
+      "name": "果园科学标准化栽培管理流程执行到位",
+      "category": "cause"
+    },
+    {
+      "id": "c_14625",
+      "name": "园区田间生态环境优良，适宜苹果树健康生长",
+      "category": "cause"
+    },
+    {
+      "id": "c_80067",
+      "name": "田间各类病原菌基数极低，外来侵染压力小",
+      "category": "cause"
+    },
+    {
+      "id": "t_43998",
+      "name": "维持现有优质标准化管护流程不变",
+      "category": "treatment"
+    },
+    {
+      "id": "t_31078",
+      "name": "果园常规周期性巡查记录生长状态即可",
+      "category": "treatment"
+    },
+    {
+      "id": "disease_苹果_锈病",
+      "name": "苹果锈病",
+      "category": "disease"
+    },
+    {
+      "id": "s_38619",
+      "name": "叶面出现橙黄色圆形凸起典型锈病病斑",
+      "category": "symptom"
+    },
+    {
+      "id": "s_89539",
+      "name": "叶片背面后期产生明显锈色粉末状孢子堆",
+      "category": "symptom"
+    },
+    {
+      "id": "s_35875",
+      "name": "发病叶片局部增厚畸形，长势衰弱",
+      "category": "symptom"
+    },
+    {
+      "id": "c_4820",
+      "name": "果园周边近距离存在桧柏、龙柏等转主寄主树木",
+      "category": "cause"
+    },
+    {
+      "id": "c_33742",
+      "name": "春季雨水偏多、田间湿度大，适宜锈菌孢子萌发侵染",
+      "category": "cause"
+    },
+    {
+      "id": "c_37080",
+      "name": "苹果新生嫩叶嫩梢幼嫩，抗病能力弱极易染病",
+      "category": "cause"
+    },
+    {
+      "id": "t_53501",
+      "name": "人工摘除初发病叶减少田间病菌侵染源头",
+      "category": "treatment"
+    },
+    {
+      "id": "t_87075",
+      "name": "雨前提前喷施保护性药剂设防阻断孢子侵染",
+      "category": "treatment"
+    },
+    {
+      "id": "t_46139",
+      "name": "全面排查周边桧柏等转主寄主分布情况",
+      "category": "treatment"
+    },
+    {
+      "id": "disease_苹果_雪松锈病",
+      "name": "苹果雪松锈病",
+      "category": "disease"
+    },
+    {
+      "id": "s_653",
+      "name": "叶面针尖至黄豆大小淡黄色典型锈斑，病斑边缘清晰",
+      "category": "symptom"
+    },
+    {
+      "id": "s_49213",
+      "name": "发病叶片局部组织轻微增厚微微隆起，无霉层无穿孔无焦枯",
+      "category": "symptom"
+    },
+    {
+      "id": "s_3735",
+      "name": "全园仅零星单枝单叶发病，无连片病斑无叶片脱落",
+      "category": "symptom"
+    },
+    {
+      "id": "s_33810",
+      "name": "暂未侵染嫩梢花芽幼果，花果生长发育完全正常",
+      "category": "symptom"
+    },
+    {
+      "id": "s_31793",
+      "name": "叶片背面暂未长出锈孢子器，处于发病最早期阶段",
+      "category": "symptom"
+    },
+    {
+      "id": "c_11430",
+      "name": "果园周边1-3公里范围内存在雪松、桧柏等柏科苗木提供越冬菌源",
+      "category": "cause"
+    },
+    {
+      "id": "c_89525",
+      "name": "春季气温15-25℃适宜锈菌孢子萌发，多风多雨晨雾多田间湿度",
+      "category": "cause"
+    },
+    {
+      "id": "c_15815",
+      "name": "苹果春季新叶嫩梢幼嫩，表皮薄抗病弱极易初次侵染",
+      "category": "cause"
+    },
+    {
+      "id": "t_46701",
+      "name": "当天全园逐树巡查人工摘除所有淡黄色锈斑病叶病梢，带出果园深埋",
+      "category": "treatment"
+    },
+    {
+      "id": "t_5800",
+      "name": "严禁病叶丢在树下地头，杜绝二次孢子再侵染",
+      "category": "treatment"
+    },
+    {
+      "id": "t_99059",
+      "name": "摘叶后24小时内全园整树应急杀菌喷雾不漏喷不重喷",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_83918",
+      "name": "代森锰锌",
+      "category": "chemical"
+    },
+    {
+      "id": "s_23102",
+      "name": "全树叶片密布连片锈病斑，无处无病全覆盖",
+      "category": "symptom"
+    },
+    {
+      "id": "s_99321",
+      "name": "大量叶片提前枯黄脱落，果园提早落叶严重",
+      "category": "symptom"
+    },
+    {
+      "id": "s_21869",
+      "name": "花芽幼果染病畸形坏死，坐果率极低落果严重",
+      "category": "symptom"
+    },
+    {
+      "id": "s_40085",
+      "name": "树势快速衰退萎靡，枝条长势衰弱来年产能受损",
+      "category": "symptom"
+    },
+    {
+      "id": "c_86877",
+      "name": "周边雪松桧柏菌源常年积累量大年初侵染极强",
+      "category": "cause"
+    },
+    {
+      "id": "c_59505",
+      "name": "连续阴雨高湿大雾天气持续，极度适宜锈病爆发",
+      "category": "cause"
+    },
+    {
+      "id": "c_29158",
+      "name": "前期防治缺位错过最佳防控窗口期病害持续加重",
+      "category": "cause"
+    },
+    {
+      "id": "t_90166",
+      "name": "彻底剪除销毁所有重病枝叶病梢杜绝菌源",
+      "category": "treatment"
+    },
+    {
+      "id": "t_24337",
+      "name": "全园多轮强效药剂封锁喷雾全域杀菌控病",
+      "category": "treatment"
+    },
+    {
+      "id": "t_48238",
+      "name": "排查清理近距离雪松寄主源头降低来年压力",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_31015",
+      "name": "苯醚甲环唑",
+      "category": "chemical"
+    },
+    {
+      "id": "disease_苹果_灰斑病",
+      "name": "苹果灰斑病",
+      "category": "disease"
+    },
+    {
+      "id": "s_25956",
+      "name": "叶面大量出现规则圆形灰色病斑，病斑分布均匀密集，全园普遍发生",
+      "category": "symptom"
+    },
+    {
+      "id": "s_17568",
+      "name": "病心发白褪绿明显，病斑边缘褐色轮廓清晰，辨识度极高",
+      "category": "symptom"
+    },
+    {
+      "id": "s_33090",
+      "name": "多个小病斑快速连片融合成大病斑，叶片整体黄化干枯焦枯",
+      "category": "symptom"
+    },
+    {
+      "id": "s_13676",
+      "name": "全园叶片由下至上逐步脱落，出现明显早期落叶早衰现象",
+      "category": "symptom"
+    },
+    {
+      "id": "s_25912",
+      "name": "树体长势萎靡衰弱，新梢停长细弱，花芽瘦小分化不良",
+      "category": "symptom"
+    },
+    {
+      "id": "c_10842",
+      "name": "果园常年落地病叶残体堆积，越冬病原菌基数庞大年初侵染压力极高",
+      "category": "cause"
+    },
+    {
+      "id": "c_50913",
+      "name": "夏秋高温多雨、夜间结露时间长，叶面长期高湿适宜病菌孢子萌发侵",
+      "category": "cause"
+    },
+    {
+      "id": "c_18506",
+      "name": "果园修剪不到位，树冠内膛郁闭不透风，田间小环境阴湿闷热利于病",
+      "category": "cause"
+    },
+    {
+      "id": "t_12753",
+      "name": "当天全园清扫地面落地病叶、枯枝残体，集中带出果园深埋销毁切断",
+      "category": "treatment"
+    },
+    {
+      "id": "t_14890",
+      "name": "人工摘除树冠下部、内膛重度染病枯叶、重病叶，减少树上侵染点位",
+      "category": "treatment"
+    },
+    {
+      "id": "t_25484",
+      "name": "立刻疏通果园排水沟渠，雨后快速排水降湿，破坏病菌繁殖高湿环境",
+      "category": "treatment"
+    },
+    {
+      "id": "disease_苹果_花叶病",
+      "name": "苹果花叶病",
+      "category": "disease"
+    },
+    {
+      "id": "s_98954",
+      "name": "全园叶片大面积出现黄绿相间不规则花叶斑驳，色差明显分布杂乱",
+      "category": "symptom"
+    },
+    {
+      "id": "s_43117",
+      "name": "果树叶脉普遍黄化褪绿，沿叶脉形成明显黄条纹病害特征",
+      "category": "symptom"
+    },
+    {
+      "id": "s_96413",
+      "name": "病树叶片畸形皱缩、狭小卷曲，春季萌芽展叶时间明显推迟",
+      "category": "symptom"
+    },
+    {
+      "id": "s_58062",
+      "name": "花芽瘦弱坏死，坐果率极低，幼果发育畸形膨大不良",
+      "category": "symptom"
+    },
+    {
+      "id": "s_8118",
+      "name": "树势整体萎靡衰弱，常年长势弱于健康树，抗寒抗病能力极差",
+      "category": "symptom"
+    },
+    {
+      "id": "c_89774",
+      "name": "建园引种带毒苗木，幼苗期隐性潜伏侵染，后期逐年显现爆发",
+      "category": "cause"
+    },
+    {
+      "id": "c_62162",
+      "name": "蚜虫、叶蝉等刺吸式害虫常年活动，持续携带病毒交叉传毒扩散",
+      "category": "cause"
+    },
+    {
+      "id": "c_74670",
+      "name": "修剪、嫁接工具无消毒处理，病健树混用造成人为接触传播",
+      "category": "cause"
+    },
+    {
+      "id": "t_32087",
+      "name": "全园逐树排查标记所有花叶病病株，分区隔离单独管护杜绝交叉接触",
+      "category": "treatment"
+    },
+    {
+      "id": "t_39142",
+      "name": "立刻全园统防统治蚜虫、叶蝉等传毒害虫，彻底切断病毒传播媒介",
+      "category": "treatment"
+    },
+    {
+      "id": "t_13053",
+      "name": "修剪工具严格分开专用，每次作业前后酒精消毒，严防人为传毒",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_30014",
+      "name": "盐酸吗啉胍",
+      "category": "chemical"
+    },
+    {
+      "id": "ch_37078",
+      "name": "吡虫啉",
+      "category": "chemical"
+    },
+    {
+      "id": "disease_苹果_褐斑病",
+      "name": "苹果褐斑病",
+      "category": "disease"
+    },
+    {
+      "id": "s_67446",
+      "name": "叶面布满褐色典型轮纹状病斑，病斑纹路清晰扩散速度极快",
+      "category": "symptom"
+    },
+    {
+      "id": "s_13894",
+      "name": "多个病斑快速连片融合成大面积坏死病区，叶片迅速黄褐干枯",
+      "category": "symptom"
+    },
+    {
+      "id": "s_63950",
+      "name": "全园叶片由下至上疯狂脱落，果园提早落叶现象极其严重",
+      "category": "symptom"
+    },
+    {
+      "id": "s_94233",
+      "name": "果实染病出现褐色凹陷病斑，果实腐烂脱落品质报废",
+      "category": "symptom"
+    },
+    {
+      "id": "s_64014",
+      "name": "树势极速掏空衰败，枝条瘦弱花芽坏死，来年产能彻底受损",
+      "category": "symptom"
+    },
+    {
+      "id": "c_77837",
+      "name": "果园地面常年堆积大量病落叶僵果，越冬病菌基数极其庞大初侵染极",
+      "category": "cause"
+    },
+    {
+      "id": "c_63588",
+      "name": "雨季连续暴雨多雨、田间积水严重，叶面长期结露潮湿极度适宜病害",
+      "category": "cause"
+    },
+    {
+      "id": "c_60170",
+      "name": "树冠郁闭内膛不透风，田间小环境高温高湿，病菌繁殖扩散速度极快",
+      "category": "cause"
+    },
+    {
+      "id": "t_95230",
+      "name": "紧急清扫全园地面病落叶烂果，集中深埋销毁切断病菌源头菌源",
+      "category": "treatment"
+    },
+    {
+      "id": "t_48157",
+      "name": "摘除树上重病叶、贴地弱枝，改善树冠通风透光条件降湿控病",
+      "category": "treatment"
+    },
+    {
+      "id": "t_34423",
+      "name": "立刻疏通全园排水沟，排除田间积水，破坏病菌繁殖高湿环境",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_68573",
+      "name": "异菌脲",
+      "category": "chemical"
+    },
+    {
+      "id": "disease_苹果_链格孢枯萎病",
+      "name": "苹果链格孢枯萎病",
+      "category": "disease"
+    },
+    {
+      "id": "s_80565",
+      "name": "果树新梢叶片整体萎蔫下垂，日间高温萎蔫明显，夜间难以恢复挺立",
+      "category": "symptom"
+    },
+    {
+      "id": "s_12308",
+      "name": "枝干表皮干缩发暗，内部维管束褐变坏死，养分水分输送彻底受阻",
+      "category": "symptom"
+    },
+    {
+      "id": "s_33509",
+      "name": "根系腐烂发黑须根脱落，吸肥吸水功能完全丧失，树体持续脱水脱肥",
+      "category": "symptom"
+    },
+    {
+      "id": "s_69773",
+      "name": "树冠局部枝条逐步枯死干枯，后期整树连片枯萎死亡",
+      "category": "symptom"
+    },
+    {
+      "id": "s_29806",
+      "name": "病树花芽脱落幼果萎蔫，挂果量归零，完全失去生产产能",
+      "category": "symptom"
+    },
+    {
+      "id": "c_21380",
+      "name": "果园土壤常年连作重茬，土壤内部病菌常年累积，土传菌源基数庞大",
+      "category": "cause"
+    },
+    {
+      "id": "c_58774",
+      "name": "田间雨季积水沤根，土壤板结透气性差，根系缺氧破损极易被病菌侵",
+      "category": "cause"
+    },
+    {
+      "id": "c_31017",
+      "name": "修剪、嫁接、农事操作造成大量枝干伤口，无防护处理给病菌侵染留",
+      "category": "cause"
+    },
+    {
+      "id": "t_21551",
+      "name": "立刻隔离标记所有枯萎病株，远离健康果树单独管护，杜绝交叉侵染",
+      "category": "treatment"
+    },
+    {
+      "id": "t_10632",
+      "name": "快速疏通果园排水沟，排除田间积水破除土壤板结，改善根系生长环",
+      "category": "treatment"
+    },
+    {
+      "id": "t_91673",
+      "name": "剪除枯死病枝、烂根病根，集中带出果园深埋销毁切断侵染源头",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_40457",
+      "name": "嘧菌酯",
+      "category": "chemical"
+    },
+    {
+      "id": "ch_57873",
+      "name": "恶霉灵",
+      "category": "chemical"
+    },
+    {
+      "id": "disease_苹果_黑斑病",
+      "name": "苹果黑斑病",
+      "category": "disease"
+    },
+    {
+      "id": "s_79049",
+      "name": "树冠外围叶片零星出现不规则黑色小病斑，病斑分散不连片",
+      "category": "symptom"
+    },
+    {
+      "id": "s_55377",
+      "name": "果实表面点状、小块状黑斑零星分布，黑斑浅表不侵入果肉",
+      "category": "symptom"
+    },
+    {
+      "id": "s_96786",
+      "name": "少量新梢轻微染病，梢部出现浅褐色发黑小点，长势基本正常",
+      "category": "symptom"
+    },
+    {
+      "id": "s_88305",
+      "name": "树势无明显衰弱，叶片不提前脱落，坐果量整体稳定充足",
+      "category": "symptom"
+    },
+    {
+      "id": "s_17264",
+      "name": "零星病果品相受损，商品果率小幅下降，无大量落果腐烂",
+      "category": "symptom"
+    },
+    {
+      "id": "c_6827",
+      "name": "果园少量病残体清理不彻底，越冬病菌残留造成年初零星初侵染",
+      "category": "cause"
+    },
+    {
+      "id": "c_7007",
+      "name": "春季多风多露天气，叶面果面长期湿润，适宜病菌孢子萌发侵染",
+      "category": "cause"
+    },
+    {
+      "id": "c_69119",
+      "name": "果园局部枝条郁闭通风差，小范围高湿环境利于病害局部扩散",
+      "category": "cause"
+    },
+    {
+      "id": "t_76096",
+      "name": "人工摘除零星病叶、病果带出果园集中处理，减少田间侵染菌源",
+      "category": "treatment"
+    },
+    {
+      "id": "t_67819",
+      "name": "轻微修剪局部郁闭枝条，改善通风透光条件降低局部湿度",
+      "category": "treatment"
+    },
+    {
+      "id": "t_6094",
+      "name": "短期内完成全园常规防护杀菌喷雾，筑牢叶面果面防护药膜",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_39007",
+      "name": "代森锌",
+      "category": "chemical"
+    },
+    {
+      "id": "disease_苹果_黑星病",
+      "name": "苹果黑星病",
+      "category": "disease"
+    },
+    {
+      "id": "s_93416",
+      "name": "少量叶片出现圆形浅褐色黑星小病斑，病斑细小分散不融合",
+      "category": "symptom"
+    },
+    {
+      "id": "s_86997",
+      "name": "幼果表面零星出现小黑星斑点，病斑浅表不深入果肉不腐烂",
+      "category": "symptom"
+    },
+    {
+      "id": "s_47238",
+      "name": "新梢嫩芽轻微染病，无枯萎坏死，枝条长势健壮正常",
+      "category": "symptom"
+    },
+    {
+      "id": "s_52502",
+      "name": "全园树势整齐旺盛，叶片翠绿不脱落，坐果率稳定达标",
+      "category": "symptom"
+    },
+    {
+      "id": "s_44627",
+      "name": "仅少量病果外观受损，不出现大量落果、畸形果情况",
+      "category": "symptom"
+    },
+    {
+      "id": "c_89800",
+      "name": "果园越冬病菌少量残留，年初花期前后完成初次零星侵染",
+      "category": "cause"
+    },
+    {
+      "id": "c_48206",
+      "name": "春季温湿度适宜平稳，病菌繁殖速度慢，仅小范围发病蔓延",
+      "category": "cause"
+    },
+    {
+      "id": "c_93223",
+      "name": "果园整体管护规范，仅局部区域通风稍差造成零星染病",
+      "category": "cause"
+    },
+    {
+      "id": "t_37269",
+      "name": "人工摘除零星病叶、病果，集中带出果园处理减少菌源",
+      "category": "treatment"
+    },
+    {
+      "id": "t_1844",
+      "name": "常规修剪微调局部郁闭枝条，提升园区整体通风透光性",
+      "category": "treatment"
+    },
+    {
+      "id": "t_17759",
+      "name": "按期开展常规杀菌防护喷雾，加固叶果防护屏障",
+      "category": "treatment"
+    },
+    {
+      "id": "s_35619",
+      "name": "全树叶片密布连片黑星大病斑，无叶不病全覆盖侵染",
+      "category": "symptom"
+    },
+    {
+      "id": "s_78184",
+      "name": "叶片快速黄化焦枯坏死，全园提前大面积疯狂落叶",
+      "category": "symptom"
+    },
+    {
+      "id": "s_70533",
+      "name": "大小果实全部染病，黑星病斑连片凹陷畸形开裂果肉坏死",
+      "category": "symptom"
+    },
+    {
+      "id": "s_95872",
+      "name": "大量幼果成果脱落腐烂，全园坐果率近乎归零绝产",
+      "category": "symptom"
+    },
+    {
+      "id": "s_78512",
+      "name": "树势极速衰败虚脱，枝条瘦弱花芽坏死，来年产能彻底报废",
+      "category": "symptom"
+    },
+    {
+      "id": "c_90997",
+      "name": "果园常年不清园，落叶僵果带菌堆积，越冬病菌基数超级庞大",
+      "category": "cause"
+    },
+    {
+      "id": "c_27073",
+      "name": "花期幼果期连续阴雨高湿寡照，极度适宜黑星病孢子萌发爆发侵染",
+      "category": "cause"
+    },
+    {
+      "id": "c_89337",
+      "name": "前期防控完全缺位，错过萌芽、花期、幼果三期关键防控窗口期",
+      "category": "cause"
+    },
+    {
+      "id": "t_55671",
+      "name": "彻底剪除全园所有重病枝叶、病梢病枝，集中销毁切断菌源",
+      "category": "treatment"
+    },
+    {
+      "id": "t_19576",
+      "name": "全园立刻多轮强效治疗药剂全域喷雾封锁，杀菌控病急救",
+      "category": "treatment"
+    },
+    {
+      "id": "t_30372",
+      "name": "紧急疏通排水降湿，修剪开窗通风，破坏病菌爆发繁殖环境",
+      "category": "treatment"
+    },
+    {
+      "id": "disease_苹果_炭疽病",
+      "name": "苹果炭疽病",
+      "category": "disease"
+    },
+    {
+      "id": "s_19018",
+      "name": "果面初生褐色圆形小病斑，病斑快速凹陷扩大呈同心轮纹状蔓延",
+      "category": "symptom"
+    },
+    {
+      "id": "s_3314",
+      "name": "病斑中心产生粉红色黏稠分生孢子团，潮湿天气发霉明显辨识度极高",
+      "category": "symptom"
+    },
+    {
+      "id": "s_59754",
+      "name": "果肉由外向内软烂变质、味道发苦，单果快速全果腐烂脱落",
+      "category": "symptom"
+    },
+    {
+      "id": "s_24484",
+      "name": "病果扎堆传染邻果，一树发病全园蔓延，树下落烂果成堆",
+      "category": "symptom"
+    },
+    {
+      "id": "s_55632",
+      "name": "果台、细枝染病干枯坏死，树体营养流失树势逐步衰弱",
+      "category": "symptom"
+    },
+    {
+      "id": "c_33787",
+      "name": "果园僵果枯枝病残体不清园，越冬炭疽病菌基数庞大潜伏侵染源头充",
+      "category": "cause"
+    },
+    {
+      "id": "c_11253",
+      "name": "果实膨大期高温闷热、连续阴雨高湿，极度适宜病菌快速繁殖扩散",
+      "category": "cause"
+    },
+    {
+      "id": "c_46285",
+      "name": "果园树冠郁闭密不透风，内膛潮湿闷热，果实扎堆接触交叉侵染严重",
+      "category": "cause"
+    },
+    {
+      "id": "t_82731",
+      "name": "人工逐树摘除所有初发病果、烂果、病果台，带出果园深埋销毁断菌",
+      "category": "treatment"
+    },
+    {
+      "id": "t_94284",
+      "name": "疏除树冠内膛密枝、贴果遮光枝，打开光路通风降湿减少果面结露",
+      "category": "treatment"
+    },
+    {
+      "id": "t_11471",
+      "name": "即刻全园果实枝叶全方位喷雾杀菌，针对性治疗防护双效控病保果",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_56403",
+      "name": "咪鲜胺",
+      "category": "chemical"
+    },
+    {
+      "id": "ch_67922",
+      "name": "甲基托布津",
+      "category": "chemical"
+    },
+    {
+      "id": "disease_苹果_轮纹病",
+      "name": "苹果轮纹病",
+      "category": "disease"
+    },
+    {
+      "id": "s_24773",
+      "name": "枝干表皮粗糙凸起形成瘤状小病斑，后期皮层干裂溃烂脱落",
+      "category": "symptom"
+    },
+    {
+      "id": "s_84981",
+      "name": "枝条长势衰弱细弱，逐年干枯枯死，树体养分输送受阻",
+      "category": "symptom"
+    },
+    {
+      "id": "s_47345",
+      "name": "果面褐色同心轮纹状病斑快速扩大，果肉软烂褐变发霉",
+      "category": "symptom"
+    },
+    {
+      "id": "s_66763",
+      "name": "果实生长期、储藏期连续烂果，商品果率大幅归零",
+      "category": "symptom"
+    },
+    {
+      "id": "s_48166",
+      "name": "全园树势逐年退化，挂果能力持续下降年年减产",
+      "category": "symptom"
+    },
+    {
+      "id": "c_18379",
+      "name": "果树枝干常年带菌，粗皮病斑瘤疤累积，越冬病菌基数常年居高不下",
+      "category": "cause"
+    },
+    {
+      "id": "c_7290",
+      "name": "果园管理粗放，枝干从不刮治涂药，病菌常年潜伏持续侵染扩散",
+      "category": "cause"
+    },
+    {
+      "id": "c_95357",
+      "name": "果实生长期多雨高湿，风雨飞溅孢子传播，果实极易接触侵染发病",
+      "category": "cause"
+    },
+    {
+      "id": "t_13937",
+      "name": "人工彻底刮除枝干所有轮纹瘤斑、溃烂老皮，露出新鲜健康木质部",
+      "category": "treatment"
+    },
+    {
+      "id": "t_59218",
+      "name": "刮治伤口立刻涂抹专用杀菌愈合药剂，封口消毒杜绝病菌再侵染",
+      "category": "treatment"
+    },
+    {
+      "id": "t_75415",
+      "name": "全园果实枝干同步喷雾杀菌，防控果实染病与枝干病菌扩散",
+      "category": "treatment"
+    },
+    {
+      "id": "disease_苹果_腐烂病",
+      "name": "苹果腐烂病",
+      "category": "disease"
+    },
+    {
+      "id": "s_18111",
+      "name": "枝干皮层发软浮肿，按压凹陷松软，流出黄褐色酒糟味腥臭汁液",
+      "category": "symptom"
+    },
+    {
+      "id": "s_4304",
+      "name": "皮层逐步腐烂坏死发黑，后期干缩开裂木质部裸露外露",
+      "category": "symptom"
+    },
+    {
+      "id": "s_78105",
+      "name": "发病枝条叶片萎蔫发黄长势衰弱，逐步干枯枯死",
+      "category": "symptom"
+    },
+    {
+      "id": "s_81592",
+      "name": "主干环剥溃烂后，整树养分输送中断快速枯死报废",
+      "category": "symptom"
+    },
+    {
+      "id": "s_36548",
+      "name": "果园病树连片扩散，逐年死树增多果园损毁严重",
+      "category": "symptom"
+    },
+    {
+      "id": "c_14158",
+      "name": "果树冬季冻害、日灼损伤枝干皮层，给病菌侵染创造天然伤口通道",
+      "category": "cause"
+    },
+    {
+      "id": "c_11069",
+      "name": "果园挂果连年超载，树体营养透支严重树势极度衰弱抗病力归零",
+      "category": "cause"
+    },
+    {
+      "id": "c_5738",
+      "name": "修剪过重伤口过多，不做消毒防护，病菌乘机侵入皮层潜伏蔓延",
+      "category": "cause"
+    },
+    {
+      "id": "t_22439",
+      "name": "逐树排查主干主枝所有腐烂病斑，标记定位全覆盖不漏一处",
+      "category": "treatment"
+    },
+    {
+      "id": "t_36814",
+      "name": "彻底刮除所有腐烂坏死皮层，刮至新鲜健康木质部无腐坏残留",
+      "category": "treatment"
+    },
+    {
+      "id": "t_37265",
+      "name": "刮治创面立刻涂抹强效腐烂病专用愈合杀菌剂，封口锁菌防蔓延",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_70820",
+      "name": "腐殖酸铜",
+      "category": "chemical"
+    },
+    {
+      "id": "ch_2",
+      "name": "戊唑醇涂抹剂",
+      "category": "chemical"
+    },
+    {
+      "id": "disease_苹果_斑点落叶病",
+      "name": "苹果斑点落叶病",
+      "category": "disease"
+    },
+    {
+      "id": "s_35031",
+      "name": "叶片初生密集褐色圆形小病斑，斑点分布均匀布满叶面",
+      "category": "symptom"
+    },
+    {
+      "id": "s_66488",
+      "name": "病斑快速扩大连片融合，叶片整体黄化焦枯坏死",
+      "category": "symptom"
+    },
+    {
+      "id": "s_96516",
+      "name": "全园叶片由上至下、由外至内提前大量脱落，树冠光秃早衰",
+      "category": "symptom"
+    },
+    {
+      "id": "s_56285",
+      "name": "新梢染病黑斑坏死，梢部瘦弱停长，枝条发育不良",
+      "category": "symptom"
+    },
+    {
+      "id": "s_77956",
+      "name": "果实膨大缓慢果个偏小，花芽分化极差来年产能受损严重",
+      "category": "symptom"
+    },
+    {
+      "id": "c_50394",
+      "name": "果园病落叶清理不彻底，越冬病菌基数大，春季初侵染源头充足",
+      "category": "cause"
+    },
+    {
+      "id": "c_82536",
+      "name": "春梢秋梢生长期多阴雨高湿、叶面结露时间长，适宜病菌快速侵染",
+      "category": "cause"
+    },
+    {
+      "id": "c_53202",
+      "name": "果树新梢嫩叶组织幼嫩，抗病能力弱，极易被病菌侵染发病",
+      "category": "cause"
+    },
+    {
+      "id": "t_20632",
+      "name": "清扫果园落地病叶集中销毁，减少田间二次侵染菌源",
+      "category": "treatment"
+    },
+    {
+      "id": "t_6424",
+      "name": "摘除树上重病叶弱梢，改善树冠通风透光条件",
+      "category": "treatment"
+    },
+    {
+      "id": "t_89609",
+      "name": "即刻全园叶片正反面全覆盖喷雾杀菌，治疗防护同步控病",
+      "category": "treatment"
+    },
+    {
+      "id": "disease_苹果_霉心病",
+      "name": "苹果霉心病",
+      "category": "disease"
+    },
+    {
+      "id": "s_98182",
+      "name": "花期花器柱头染病潜伏，无任何明显外观发病症状",
+      "category": "symptom"
+    },
+    {
+      "id": "s_41890",
+      "name": "果实生长期外表完好正常，长势品相与健康果实无差异",
+      "category": "symptom"
+    },
+    {
+      "id": "s_98374",
+      "name": "果实内部心室发霉长毛，果肉褐变腐烂发黑变质",
+      "category": "symptom"
+    },
+    {
+      "id": "s_96048",
+      "name": "病果易早期脱落，采收储藏期集中烂果批量报废",
+      "category": "symptom"
+    },
+    {
+      "id": "s_64377",
+      "name": "隐形烂果占比高，分拣难损耗大，果品商品率大幅下降",
+      "category": "symptom"
+    },
+    {
+      "id": "c_70072",
+      "name": "果园花期阴雨高湿、低温寡照，极其适宜病菌借花器侵染侵入",
+      "category": "cause"
+    },
+    {
+      "id": "c_19470",
+      "name": "初花盛花期防控缺位，错过唯一黄金防控窗口期后期无法补救",
+      "category": "cause"
+    },
+    {
+      "id": "c_78391",
+      "name": "果园郁闭通风差，花期田间湿度大，病菌孢子传播侵染速度快",
+      "category": "cause"
+    },
+    {
+      "id": "t_21249",
+      "name": "初花、盛花、谢花三期分阶段精准喷药，阻断花器病菌侵染通道",
+      "category": "treatment"
+    },
+    {
+      "id": "t_87767",
+      "name": "花期严控果园湿度，疏通沟渠排水，降低田间侵染环境",
+      "category": "treatment"
+    },
+    {
+      "id": "t_56285",
+      "name": "人工摘除弱花残花，减少病菌侵染薄弱花器点位",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_45438",
+      "name": "多菌灵",
+      "category": "chemical"
+    },
+    {
+      "id": "disease_苹果_锈果病",
+      "name": "苹果锈果病",
+      "category": "disease"
+    },
+    {
+      "id": "s_79703",
+      "name": "果实表面出现条状锈斑、龟裂凸起，果面凹凸不平锈色浓重畸形难看",
+      "category": "symptom"
+    },
+    {
+      "id": "s_86756",
+      "name": "果面花脸斑驳着色不均，果肉硬化木质化，口感酸涩品质彻底报废",
+      "category": "symptom"
+    },
+    {
+      "id": "s_52172",
+      "name": "病树新梢节间缩短枝条矮化，整体树势长势衰弱萎靡",
+      "category": "symptom"
+    },
+    {
+      "id": "s_89925",
+      "name": "叶片轻微皱缩变小，萌芽展叶迟缓，光合作用效率大幅降低",
+      "category": "symptom"
+    },
+    {
+      "id": "s_98957",
+      "name": "花芽分化不良坐果稀少，年年挂果畸形无优质商品果产出",
+      "category": "symptom"
+    },
+    {
+      "id": "c_88167",
+      "name": "建园引种带毒苗木，幼苗潜伏带毒，定植后逐年显症爆发危害",
+      "category": "cause"
+    },
+    {
+      "id": "c_40018",
+      "name": "修剪嫁接工具病健树混用不消毒，人为操作接触交叉传播病毒",
+      "category": "cause"
+    },
+    {
+      "id": "c_21951",
+      "name": "蚜虫、叶蝉等刺吸害虫常年活动，持续携带病毒全园扩散传毒",
+      "category": "cause"
+    },
+    {
+      "id": "t_70277",
+      "name": "全园逐树排查标记锈果病病株，分区隔离单独管护，杜绝病健树接触",
+      "category": "treatment"
+    },
+    {
+      "id": "t_11321",
+      "name": "修剪工具严格分开专用，每次作业前后酒精彻底消毒杀菌防传毒",
+      "category": "treatment"
+    },
+    {
+      "id": "t_55923",
+      "name": "全园统防统治刺吸式害虫，切断昆虫传毒核心传播媒介",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_4031",
+      "name": "氨基寡糖素",
+      "category": "chemical"
+    },
+    {
+      "id": "ch_89712",
+      "name": "吡蚜酮",
+      "category": "chemical"
+    },
+    {
+      "id": "s_6637",
+      "name": "果面初生淡褐色圆形小病斑，迅速扩大、凹陷呈深褐色",
+      "category": "symptom"
+    },
+    {
+      "id": "s_35832",
+      "name": "果肉自果面向果心呈漏斗状腐烂，味苦，与健康组织界限分明",
+      "category": "symptom"
+    },
+    {
+      "id": "s_93829",
+      "name": "病斑后期产生黑色小粒点，呈同心轮纹排列，潮湿时溢出粉红色黏液",
+      "category": "symptom"
+    },
+    {
+      "id": "s_11488",
+      "name": "病果连片腐烂脱落，或失水干缩成黑色僵果挂树越冬",
+      "category": "symptom"
+    },
+    {
+      "id": "s_19522",
+      "name": "衰弱枝条、果台形成褐色溃疡斑，后期龟裂、木质部外露枯死",
+      "category": "symptom"
+    },
+    {
+      "id": "c_77093",
+      "name": "果园僵果、病果台、枯枝清理不彻底，越冬菌源基数庞大",
+      "category": "cause"
+    },
+    {
+      "id": "c_59854",
+      "name": "幼果期至膨大期高温闷热、多雨高湿，极适宜孢子萌发侵染",
+      "category": "cause"
+    },
+    {
+      "id": "c_19264",
+      "name": "树冠郁闭、通风透光差，内膛潮湿结露时间长，利于病害扩散",
+      "category": "cause"
+    },
+    {
+      "id": "t_76619",
+      "name": "人工逐树摘除病果、烂果、僵果及病果台，带出果园深埋或烧毁",
+      "category": "treatment"
+    },
+    {
+      "id": "t_27513",
+      "name": "疏除内膛密枝、徒长枝、遮光枝，改善通风透光、降低湿度",
+      "category": "treatment"
+    },
+    {
+      "id": "t_71004",
+      "name": "摘果清园后24小时内全园果实、枝叶均匀喷雾，治疗+保护双效控",
+      "category": "treatment"
+    },
+    {
+      "id": "disease_樱桃_褐腐病",
+      "name": "樱桃褐腐病",
+      "category": "disease"
+    },
+    {
+      "id": "s_47039",
+      "name": "花器褐变腐烂枯萎，花朵发霉脱落，坐果基础严重受损",
+      "category": "symptom"
+    },
+    {
+      "id": "s_56876",
+      "name": "幼果成果表面褐色圆形病斑快速扩大，全果软烂褐变流水",
+      "category": "symptom"
+    },
+    {
+      "id": "s_22091",
+      "name": "病果表面布满灰褐色绒毛状霉层，潮湿天气发霉症状极其明显",
+      "category": "symptom"
+    },
+    {
+      "id": "s_1144",
+      "name": "病果相互粘连扎堆传染，全园果实连片腐烂脱落落果满地",
+      "category": "symptom"
+    },
+    {
+      "id": "s_41908",
+      "name": "果台枝染病干枯坏死，树体营养流失树势同步衰弱退化",
+      "category": "symptom"
+    },
+    {
+      "id": "c_80883",
+      "name": "果园僵果病花枯枝不清园，越冬褐腐病菌基数庞大年初侵染源头充足",
+      "category": "cause"
+    },
+    {
+      "id": "c_86864",
+      "name": "花期幼果期连续阴雨高湿大雾，极度适宜病菌孢子萌发繁殖侵染",
+      "category": "cause"
+    },
+    {
+      "id": "c_24377",
+      "name": "樱桃果园郁闭通风差，树冠内膛潮湿结露时间长，病害扩散速度极快",
+      "category": "cause"
+    },
+    {
+      "id": "t_83625",
+      "name": "人工摘除烂果、病花、僵果、病果台，集中带出果园深埋销毁断菌源",
+      "category": "treatment"
+    },
+    {
+      "id": "t_19811",
+      "name": "疏除树冠内膛密枝弱枝，打开光路通风降湿减少花果结露",
+      "category": "treatment"
+    },
+    {
+      "id": "t_21205",
+      "name": "立刻全园花果同步喷雾杀菌，治疗防护双效封锁控病保果",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_97880",
+      "name": "嘧霉胺",
+      "category": "chemical"
+    },
+    {
+      "id": "ch_31009",
+      "name": "代森联",
+      "category": "chemical"
+    },
+    {
+      "id": "disease_樱桃_叶斑病",
+      "name": "樱桃叶斑病",
+      "category": "disease"
+    },
+    {
+      "id": "s_91611",
+      "name": "叶片初生紫红色圆形小病斑，斑点均匀密布全园叶片",
+      "category": "symptom"
+    },
+    {
+      "id": "s_64427",
+      "name": "病斑后期扩大变褐干枯，中心坏死脱落形成穿孔状孔洞",
+      "category": "symptom"
+    },
+    {
+      "id": "s_1742",
+      "name": "叶片整体黄化焦枯，全园叶片提前批量脱落树冠光秃早衰",
+      "category": "symptom"
+    },
+    {
+      "id": "s_98752",
+      "name": "新梢长势细弱停长过早，枝条发育不良花芽瘦小分化差",
+      "category": "symptom"
+    },
+    {
+      "id": "s_38102",
+      "name": "树势逐年萎靡衰弱，抗寒抗逆能力下降连年减产降质",
+      "category": "symptom"
+    },
+    {
+      "id": "c_91302",
+      "name": "果园常年不清园，落地病叶堆积越冬病菌基数大年初侵染充足",
+      "category": "cause"
+    },
+    {
+      "id": "c_18242",
+      "name": "春夏秋季多雨高湿叶面结露久，适宜病菌孢子萌发飞溅传播侵染",
+      "category": "cause"
+    },
+    {
+      "id": "c_97095",
+      "name": "果园修剪密闭通风透光差，田间小环境潮湿闷热利于病害扩散",
+      "category": "cause"
+    },
+    {
+      "id": "t_22937",
+      "name": "清扫全园落地病叶集中深埋销毁，切断田间二次侵染菌源",
+      "category": "treatment"
+    },
+    {
+      "id": "t_54018",
+      "name": "摘除树上重病叶弱梢，改善树冠通风透光降湿条件",
+      "category": "treatment"
+    },
+    {
+      "id": "t_88635",
+      "name": "即刻全园叶片正反面全覆盖喷雾杀菌，治疗防护同步控病保叶",
+      "category": "treatment"
+    },
+    {
+      "id": "disease_樱桃_流胶病",
+      "name": "樱桃流胶病",
+      "category": "disease"
+    },
+    {
+      "id": "s_38685",
+      "name": "主干主枝皮层流出透明黏稠胶质液体，氧化后变褐硬化结块",
+      "category": "symptom"
+    },
+    {
+      "id": "s_33600",
+      "name": "流胶部位皮层发软溃烂坏死，木质部变色衰败输导受阻",
+      "category": "symptom"
+    },
+    {
+      "id": "s_28383",
+      "name": "发病枝条长势衰弱细弱，叶片发黄变小树体萎靡不振",
+      "category": "symptom"
+    },
+    {
+      "id": "s_82550",
+      "name": "花芽瘦弱坐果率低，果实品质差个头小年年减产",
+      "category": "symptom"
+    },
+    {
+      "id": "s_47803",
+      "name": "严重时枝干环剥溃烂，整树养分中断逐步枯死报废",
+      "category": "symptom"
+    },
+    {
+      "id": "c_43196",
+      "name": "修剪过重、机械磕碰、病虫啃咬造成大量枝干伤口，愈合差诱发流胶",
+      "category": "cause"
+    },
+    {
+      "id": "c_93975",
+      "name": "冬季冻害夏季日灼损伤枝干皮层，形成隐性创口持续溃烂流胶",
+      "category": "cause"
+    },
+    {
+      "id": "c_68629",
+      "name": "果园土壤板结黏重透气性差，根系生长不良树势衰弱诱发流胶",
+      "category": "cause"
+    },
+    {
+      "id": "t_48494",
+      "name": "逐树排查所有枝干流胶点位，标记定位全覆盖不漏一处",
+      "category": "treatment"
+    },
+    {
+      "id": "t_96250",
+      "name": "彻底刮除枝干表面胶块及溃烂坏死皮层，刮至新鲜健康木质部",
+      "category": "treatment"
+    },
+    {
+      "id": "t_77147",
+      "name": "刮胶创面立刻涂抹专用杀菌愈合药剂，封口锁菌保湿防复发",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_56020",
+      "name": "辛菌胺醋酸盐",
+      "category": "chemical"
+    },
+    {
+      "id": "ch_61743",
+      "name": "腐殖酸愈合剂",
+      "category": "chemical"
+    },
+    {
+      "id": "disease_樱桃_根腐病",
+      "name": "樱桃根腐病",
+      "category": "disease"
+    },
+    {
+      "id": "s_9011",
+      "name": "果树叶片日间高温萎蔫下垂，夜间难以恢复持续萎靡衰弱",
+      "category": "symptom"
+    },
+    {
+      "id": "s_72645",
+      "name": "须根发黑腐烂脱落，主根皮层溃烂剥离，根系坏死无吸收能力",
+      "category": "symptom"
+    },
+    {
+      "id": "s_54530",
+      "name": "树体长势衰弱矮小，叶片发黄变薄，萌芽展叶迟缓无力",
+      "category": "symptom"
+    },
+    {
+      "id": "s_85571",
+      "name": "花芽脱落坐果率极低，果实偏小早落基本无产量",
+      "category": "symptom"
+    },
+    {
+      "id": "s_63520",
+      "name": "后期整树快速枯死，果园死树连片逐年扩散蔓延",
+      "category": "symptom"
+    },
+    {
+      "id": "c_39766",
+      "name": "果园地势低洼排水不畅，雨季田间长期积水沤根，根系缺氧腐烂",
+      "category": "cause"
+    },
+    {
+      "id": "c_51387",
+      "name": "土壤黏重板结透气性差，根系呼吸受阻活力下降极易染病",
+      "category": "cause"
+    },
+    {
+      "id": "c_39229",
+      "name": "果园连作重茬种植，土壤病菌常年累积土传菌源基数庞大",
+      "category": "cause"
+    },
+    {
+      "id": "t_63817",
+      "name": "立刻疏通全园排水沟渠，排除田间积水破除土壤板结降湿透气",
+      "category": "treatment"
+    },
+    {
+      "id": "t_33868",
+      "name": "标记隔离萎蔫病树，单独管护杜绝健康果树交叉染病",
+      "category": "treatment"
+    },
+    {
+      "id": "t_56965",
+      "name": "剪除腐烂坏死病根烂根，带出果园销毁切断菌源",
+      "category": "treatment"
+    },
+    {
+      "id": "disease_樱桃_穿孔病",
+      "name": "樱桃穿孔病",
+      "category": "disease"
+    },
+    {
+      "id": "s_17704",
+      "name": "叶片初生水渍状小病斑，后期干枯坏死脱落形成圆形穿孔孔洞",
+      "category": "symptom"
+    },
+    {
+      "id": "s_72123",
+      "name": "叶片黄化焦枯早衰，全园叶片提前批量脱落树冠光秃",
+      "category": "symptom"
+    },
+    {
+      "id": "s_81690",
+      "name": "新梢染病干裂凹陷坏死，枝条长势衰弱干枯停长",
+      "category": "symptom"
+    },
+    {
+      "id": "s_7086",
+      "name": "果实染病凹陷斑点畸形，品相受损商品果率大幅下降",
+      "category": "symptom"
+    },
+    {
+      "id": "s_73915",
+      "name": "树势逐年萎靡衰弱，花芽分化不良年年减产降质",
+      "category": "symptom"
+    },
+    {
+      "id": "c_18928",
+      "name": "果园病枝病叶清理不净，越冬真菌细菌病菌基数大初侵染压力高",
+      "category": "cause"
+    },
+    {
+      "id": "c_49872",
+      "name": "春季多雨高湿回暖快，适宜病菌繁殖传播混合侵染发病",
+      "category": "cause"
+    },
+    {
+      "id": "c_17226",
+      "name": "果园郁闭通风差田间湿度大，病害扩散速度快连片蔓延",
+      "category": "cause"
+    },
+    {
+      "id": "t_95979",
+      "name": "修剪疏除密枝弱枝，改善通风透光降湿破坏发病环境",
+      "category": "treatment"
+    },
+    {
+      "id": "t_83771",
+      "name": "即刻全园真菌细菌双效喷雾杀菌，同步控病保叶护梢",
+      "category": "treatment"
+    },
+    {
+      "id": "ch_39331",
+      "name": "噻唑锌",
+      "category": "chemical"
+    },
+    {
+      "id": "disease_樱桃_炭疽病",
+      "name": "樱桃炭疽病",
+      "category": "disease"
+    },
+    {
+      "id": "s_11022",
+      "name": "叶片褐色病斑扩大干枯坏死，叶片早衰发黄提前脱落",
+      "category": "symptom"
+    },
+    {
+      "id": "s_82395",
+      "name": "新梢表面凹陷褐色病斑，梢部干裂枯死长势停滞不长",
+      "category": "symptom"
+    },
+    {
+      "id": "s_96918",
+      "name": "果面褐色凹陷圆形病斑快速扩大，果肉软烂发霉变质",
+      "category": "symptom"
+    },
+    {
+      "id": "s_94055",
+      "name": "病果扎堆传染邻果，全园烂果脱落商品果大量报废",
+      "category": "symptom"
+    },
+    {
+      "id": "s_25366",
+      "name": "树体营养流失衰弱，新梢发育差花芽瘦弱来年减产",
+      "category": "symptom"
+    },
+    {
+      "id": "c_15239",
+      "name": "果园病梢烂果枯枝不清园，越冬炭疽病菌基数大潜伏侵染充足",
+      "category": "cause"
+    },
+    {
+      "id": "c_40229",
+      "name": "果实膨大期高温闷热连续阴雨，适宜病菌快速繁殖侵染爆发",
+      "category": "cause"
+    },
+    {
+      "id": "c_68665",
+      "name": "果园树冠郁闭内膛潮湿，果实新梢密集接触交叉侵染严重",
+      "category": "cause"
+    },
+    {
+      "id": "t_52590",
+      "name": "人工摘除病果病梢病叶，集中带出果园深埋销毁断菌源",
+      "category": "treatment"
+    },
+    {
+      "id": "t_3412",
+      "name": "疏除内膛密枝遮光枝，通风降湿减少果面梢部结露侵染",
+      "category": "treatment"
+    },
+    {
+      "id": "t_83722",
+      "name": "全园梢叶果实同步喷雾杀菌，治疗防护双效控病保产",
+      "category": "treatment"
+    }
+  ],
+  "links": [
+    {
+      "source": "disease_樱桃_健康",
+      "target": "crop_樱桃",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_樱桃_健康",
+      "target": "s_2316",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_健康",
+      "target": "s_38819",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_健康",
+      "target": "s_27144",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_健康",
+      "target": "s_62375",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_健康",
+      "target": "s_20103",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_健康",
+      "target": "c_63729",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_健康",
+      "target": "c_5276",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_健康",
+      "target": "c_73250",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_健康",
+      "target": "t_68522",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_健康",
+      "target": "t_21728",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_健康",
+      "target": "t_26828",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_健康",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "crop_樱桃",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "s_16038",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "s_37874",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "s_63421",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "s_16453",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "s_9127",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "c_65378",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "c_85532",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "c_15381",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "t_69035",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "t_81849",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "t_7270",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "ch_23248",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "ch_14598",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "s_22250",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "s_64572",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "s_65549",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "s_57986",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "s_9013",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "c_70939",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "c_55509",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "c_46641",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "t_69161",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "t_29950",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "t_50851",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "ch_29750",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "ch_31459",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_白粉病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_健康",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_健康",
+      "target": "s_81255",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_健康",
+      "target": "s_5351",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_健康",
+      "target": "s_71659",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_健康",
+      "target": "c_37665",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_健康",
+      "target": "c_14625",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_健康",
+      "target": "c_80067",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_健康",
+      "target": "t_43998",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_健康",
+      "target": "t_31078",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_健康",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_锈病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_锈病",
+      "target": "s_38619",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_锈病",
+      "target": "s_89539",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_锈病",
+      "target": "s_35875",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_锈病",
+      "target": "c_4820",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_锈病",
+      "target": "c_33742",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_锈病",
+      "target": "c_37080",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_锈病",
+      "target": "t_53501",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_锈病",
+      "target": "t_87075",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_锈病",
+      "target": "t_46139",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_锈病",
+      "target": "ch_23248",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_锈病",
+      "target": "ch_31459",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_锈病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "s_653",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "s_49213",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "s_3735",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "s_33810",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "s_31793",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "c_11430",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "c_89525",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "c_15815",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "t_46701",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "t_5800",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "t_99059",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "ch_14598",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "ch_83918",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "s_23102",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "s_99321",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "s_21869",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "s_40085",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "c_86877",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "c_59505",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "c_29158",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "t_90166",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "t_24337",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "t_48238",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "ch_29750",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "ch_31015",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_雪松锈病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "s_25956",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "s_17568",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "s_33090",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "s_13676",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "s_25912",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "c_10842",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "c_50913",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "c_18506",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "t_12753",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "t_14890",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "t_25484",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "ch_31015",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "ch_83918",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_灰斑病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "s_98954",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "s_43117",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "s_96413",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "s_58062",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "s_8118",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "c_89774",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "c_62162",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "c_74670",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "t_32087",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "t_39142",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "t_13053",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "ch_30014",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "ch_37078",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_花叶病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "s_67446",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "s_13894",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "s_63950",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "s_94233",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "s_64014",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "c_77837",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "c_63588",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "c_60170",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "t_95230",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "t_48157",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "t_34423",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "ch_31459",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "ch_68573",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_褐斑病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "s_80565",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "s_12308",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "s_33509",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "s_69773",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "s_29806",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "c_21380",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "c_58774",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "c_31017",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "t_21551",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "t_10632",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "t_91673",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "ch_40457",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "ch_57873",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_链格孢枯萎病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "s_79049",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "s_55377",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "s_96786",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "s_88305",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "s_17264",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "c_6827",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "c_7007",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "c_69119",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "t_76096",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "t_67819",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "t_6094",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "ch_39007",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "ch_14598",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_黑斑病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "s_93416",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "s_86997",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "s_47238",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "s_52502",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "s_44627",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "c_89800",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "c_48206",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "c_93223",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "t_37269",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "t_1844",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "t_17759",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "ch_83918",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "ch_31015",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "s_35619",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "s_78184",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "s_70533",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "s_95872",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "s_78512",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "c_90997",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "c_27073",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "c_89337",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "t_55671",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "t_19576",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "t_30372",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "ch_29750",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "ch_31459",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_黑星病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "s_19018",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "s_3314",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "s_59754",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "s_24484",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "s_55632",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "c_33787",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "c_11253",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "c_46285",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "t_82731",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "t_94284",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "t_11471",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "ch_56403",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "ch_67922",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "s_24773",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "s_84981",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "s_47345",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "s_66763",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "s_48166",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "c_18379",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "c_7290",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "c_95357",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "t_13937",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "t_59218",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "t_75415",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "ch_31459",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "ch_83918",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_轮纹病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "s_18111",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "s_4304",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "s_78105",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "s_81592",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "s_36548",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "c_14158",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "c_11069",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "c_5738",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "t_22439",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "t_36814",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "t_37265",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "ch_70820",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "ch_2",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_腐烂病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "s_35031",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "s_66488",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "s_96516",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "s_56285",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "s_77956",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "c_50394",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "c_82536",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "c_53202",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "t_20632",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "t_6424",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "t_89609",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "ch_68573",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "ch_31015",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_斑点落叶病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "s_98182",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "s_41890",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "s_98374",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "s_96048",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "s_64377",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "c_70072",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "c_19470",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "c_78391",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "t_21249",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "t_87767",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "t_56285",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "ch_45438",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "ch_68573",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_霉心病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "crop_苹果",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "s_79703",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "s_86756",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "s_52172",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "s_89925",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "s_98957",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "c_88167",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "c_40018",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "c_21951",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "t_70277",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "t_11321",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "t_55923",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "ch_4031",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "ch_89712",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_锈果病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "s_6637",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "s_35832",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "s_93829",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "s_11488",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "s_19522",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "c_77093",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "c_59854",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "c_19264",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "t_76619",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "t_27513",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "t_71004",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "ch_56403",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "ch_83918",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "ch_31015",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_苹果_炭疽病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "crop_樱桃",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "s_47039",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "s_56876",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "s_22091",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "s_1144",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "s_41908",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "c_80883",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "c_86864",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "c_24377",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "t_83625",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "t_19811",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "t_21205",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "ch_97880",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "ch_31009",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_褐腐病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "crop_樱桃",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "s_91611",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "s_64427",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "s_1742",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "s_98752",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "s_38102",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "c_91302",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "c_18242",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "c_97095",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "t_22937",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "t_54018",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "t_88635",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "ch_31015",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "ch_83918",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_叶斑病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "crop_樱桃",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "s_38685",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "s_33600",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "s_28383",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "s_82550",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "s_47803",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "c_43196",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "c_93975",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "c_68629",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "t_48494",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "t_96250",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "t_77147",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "ch_56020",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "ch_61743",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_流胶病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "crop_樱桃",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "s_9011",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "s_72645",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "s_54530",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "s_85571",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "s_63520",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "c_39766",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "c_51387",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "c_39229",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "t_63817",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "t_33868",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "t_56965",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "ch_57873",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "ch_40457",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_根腐病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "crop_樱桃",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "s_17704",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "s_72123",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "s_81690",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "s_7086",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "s_73915",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "c_18928",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "c_49872",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "c_17226",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "t_75415",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "t_95979",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "t_83771",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "ch_39331",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "ch_31015",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_穿孔病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "crop_樱桃",
+      "label": "发生于",
+      "relation": "BELONGS_TO"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "s_11022",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "s_82395",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "s_96918",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "s_94055",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "s_25366",
+      "label": "症状",
+      "relation": "HAS_SYMPTOM"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "c_15239",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "c_40229",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "c_68665",
+      "label": "病因",
+      "relation": "HAS_CAUSE"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "t_52590",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "t_3412",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "t_83722",
+      "label": "防治",
+      "relation": "TREATED_BY"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "ch_56403",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "ch_83918",
+      "label": "推荐药剂",
+      "relation": "USE_PESTICIDE"
+    },
+    {
+      "source": "disease_樱桃_炭疽病",
+      "target": "type_真菌性病害",
+      "label": "类型",
+      "relation": "IS_TYPE"
+    }
+  ]
+}

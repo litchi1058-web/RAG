@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mermaid Diagram</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        body { margin: 0; padding: 20px; background: white; }
+        .mermaid { max-width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="mermaid">flowchart TD
+    A[叶片图像输入] --> B[图像预处理<br/>Resize: 224×224]
+    B --> C[LSNet-CBAM模型推理]
+    C --> D{识别结果}
+    D -->|病害类别| E[Disease节点映射]
+    D -->|置信度| F[风险等级评估]
+    
+    E --> G[Cypher知识检索]
+    G --> H[知识片段提取]
+    H --> I[结构化知识库补充]
+    
+    F --> J[Prompt构造]
+    I --> J
+    J --> K[Qwen2-1.5B-Instruct]
+    K --> L[诊断报告生成]
+    L --> M[输出诊断结果]
+    
+    subgraph 知识检索[知识检索]
+        G
+        H
+        I
+    end
+    
+    subgraph Prompt构建[Prompt构建]
+        J
+    end
+    
+    subgraph 诊断生成[诊断生成]
+        K
+        L
+    end
+    
+    classDef process fill:#E8F4FD,stroke:#2E86DE,stroke-width:2px;
+    classDef decision fill:#FFF2CC,stroke:#D6B656,stroke-width:2px;
+    classDef knowledge fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px;
+    classDef llm fill:#FCE4EC,stroke:#C2185B,stroke-width:2px;
+    
+    class A,B,C process;
+    class D decision;
+    class E,F process;
+    class G,H,I knowledge;
+    class J process;
+    class K,L llm;
+    class M process;</div>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+</body>
+</html>

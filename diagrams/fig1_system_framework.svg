@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" font-family="'Microsoft YaHei','SimHei',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#546E7A"/></marker><marker id="al" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#37474F"/></marker><filter id="s"><feDropShadow dx="1" dy="1" stdDeviation="1.5" flood-opacity="0.2"/></filter></defs>
+<rect width="1600" height="1050" fill="#FAFAFA"/>
+<text x="800" y="42" text-anchor="middle" font-size="19" font-weight="bold" fill="#1A237E">图1　知识图谱增强的苹果樱桃叶片病害轻量级大模型诊断方法总体框架</text>
+<text x="800" y="65" text-anchor="middle" font-size="12" fill="#546E7A" font-style="italic">Fig.1  Overall framework of the knowledge-graph-enhanced lightweight LLM diagnosis method</text>
+<g opacity="0.3">
+<rect x="50" y="880" width="1500" height="120" rx="10" fill="#90CAF9"/><rect x="50" y="710" width="1500" height="120" rx="10" fill="#A5D6A7"/>
+<rect x="50" y="540" width="1500" height="120" rx="10" fill="#FFF59D"/><rect x="50" y="370" width="1500" height="120" rx="10" fill="#FFCC80"/>
+<rect x="50" y="200" width="1500" height="120" rx="10" fill="#CE93D8"/><rect x="50" y="30" width="1500" height="120" rx="10" fill="#EF9A9A"/>
+</g>
+<g font-size="15" font-weight="bold" fill="#1A237E">
+<text x="70" y="970">数据输入层</text><text x="70" y="800">图像识别层</text>
+<text x="70" y="630">知识组织与图谱构建层</text><text x="70" y="460">识别结果驱动的知识检索层</text>
+<text x="70" y="290">本地RAG诊断生成层</text><text x="70" y="120">应用验证层</text>
+</g>
+<g stroke="#37474F" stroke-width="3" marker-end="url(#al)">
+<line x1="800" y1="710" x2="800" y2="688"/><line x1="800" y1="540" x2="800" y2="518"/>
+<line x1="800" y1="370" x2="800" y2="348"/><line x1="800" y1="200" x2="800" y2="178"/>
+</g>
+<g filter="url(#s)">
+<rect x="100" y="900" width="280" height="80" rx="8" fill="#90CAF9" opacity="0.9"/><rect x="440" y="900" width="280" height="80" rx="8" fill="#90CAF9" opacity="0.9"/>
+<rect x="780" y="900" width="280" height="80" rx="8" fill="#90CAF9" opacity="0.9"/><rect x="1120" y="900" width="280" height="80" rx="8" fill="#90CAF9" opacity="0.9"/>
+<rect x="100" y="730" width="370" height="80" rx="8" fill="#A5D6A7" opacity="0.9"/><rect x="590" y="730" width="370" height="80" rx="8" fill="#A5D6A7" opacity="0.9"/>
+<rect x="1080" y="730" width="370" height="80" rx="8" fill="#A5D6A7" opacity="0.9"/>
+<rect x="100" y="560" width="370" height="80" rx="8" fill="#FFF59D" opacity="0.9"/><rect x="590" y="560" width="370" height="80" rx="8" fill="#FFF59D" opacity="0.9"/>
+<rect x="1080" y="560" width="370" height="80" rx="8" fill="#FFF59D" opacity="0.9"/>
+<rect x="100" y="390" width="370" height="80" rx="8" fill="#FFCC80" opacity="0.9"/><rect x="590" y="390" width="370" height="80" rx="8" fill="#FFCC80" opacity="0.9"/>
+<rect x="1080" y="390" width="370" height="80" rx="8" fill="#FFCC80" opacity="0.9"/>
+<rect x="80" y="220" width="300" height="80" rx="8" fill="#CE93D8" opacity="0.9"/><rect x="430" y="220" width="300" height="80" rx="8" fill="#CE93D8" opacity="0.9"/>
+<rect x="780" y="220" width="320" height="80" rx="8" fill="#CE93D8" opacity="0.9"/><rect x="1150" y="220" width="300" height="80" rx="8" fill="#CE93D8" opacity="0.9"/>
+<rect x="80" y="50" width="320" height="80" rx="8" fill="#EF9A9A" opacity="0.9"/><rect x="460" y="50" width="280" height="80" rx="8" fill="#EF9A9A" opacity="0.9"/>
+<rect x="800" y="50" width="280" height="80" rx="8" fill="#EF9A9A" opacity="0.9"/><rect x="1140" y="50" width="300" height="80" rx="8" fill="#EF9A9A" opacity="0.9"/>
+</g>
+<g fill="#1A237E" text-anchor="middle">
+<text x="240" y="935" font-size="14">苹果/樱桃</text><text x="240" y="955" font-size="14">叶片图像</text>
+<text x="580" y="935" font-size="14">植保图鉴</text><text x="580" y="955" font-size="14">专业文献</text>
+<text x="920" y="935" font-size="14">农业技术</text><text x="920" y="955" font-size="14">资料</text>
+<text x="1260" y="935" font-size="14">用户自然</text><text x="1260" y="955" font-size="14">语言问题</text>
+<text x="285" y="765" font-size="13">图像预处理</text><text x="285" y="785" font-size="12">(Resize 224x224, Normalize)</text>
+<text x="775" y="765" font-size="15">LSNet-CBAM</text><text x="775" y="785" font-size="13">特征提取 + 分类推理</text>
+<text x="1265" y="765" font-size="14">病害类别 + 置信度</text><text x="1265" y="785" font-size="13">(94.32%)</text>
+<text x="285" y="595" font-size="14">结构化病害知识库</text><text x="285" y="615" font-size="12">(27 条知识条目)</text>
+<text x="775" y="595" font-size="14">本体设计</text><text x="775" y="615" font-size="12">Crop/Disease/Symptom/Pesticide</text>
+<text x="1265" y="595" font-size="14">Neo4j 知识图谱</text><text x="1265" y="615" font-size="12">(120 节点, 136 关系)</text>
+<text x="285" y="430" font-size="14">Disease 节点映射定位</text>
+<text x="775" y="425" font-size="14">Cypher 规则化查询</text><text x="775" y="445" font-size="12">(occur_on/has_symptom/use_pesticide)</text>
+<text x="1265" y="425" font-size="14">症状/病因/防治/药剂</text><text x="1265" y="445" font-size="12">(多源知识融合)</text>
+</g>
+<g fill="#FFFFFF" text-anchor="middle">
+<text x="230" y="260" font-size="14">置信度判断</text><text x="580" y="260" font-size="14">Prompt 构造</text>
+<text x="940" y="255" font-size="14">Qwen2-1.5B-Instruct</text><text x="940" y="275" font-size="11">(GGUF Q4_K_M 本地推理)</text>
+<text x="1300" y="260" font-size="14">证据充分性检查</text>
+<text x="240" y="85" font-size="14">诊断报告生成</text><text x="240" y="105" font-size="12">(症状/防治/用药)</text>
+<text x="600" y="90" font-size="14">智能问答交互</text>
+<text x="940" y="85" font-size="14">复核提示</text><text x="940" y="105" font-size="12">(低置信度场景)</text>
+<text x="1290" y="90" font-size="14">Web 端结果展示</text>
+</g>
+<g stroke="#546E7A" stroke-width="2" marker-end="url(#a)">
+<line x1="380" y1="940" x2="435" y2="940"/><line x1="720" y1="940" x2="775" y2="940"/><line x1="1060" y1="940" x2="1115" y2="940"/>
+<line x1="470" y1="770" x2="585" y2="770"/><line x1="960" y1="770" x2="1075" y2="770"/>
+<line x1="470" y1="600" x2="585" y2="600"/><line x1="960" y1="600" x2="1075" y2="600"/>
+<line x1="470" y1="430" x2="585" y2="430"/><line x1="960" y1="430" x2="1075" y2="430"/>
+<line x1="380" y1="260" x2="425" y2="260"/><line x1="730" y1="260" x2="775" y2="260"/><line x1="1100" y1="260" x2="1145" y2="260"/>
+<line x1="400" y1="90" x2="455" y2="90"/><line x1="740" y1="90" x2="795" y2="90"/><line x1="1080" y1="90" x2="1135" y2="90"/>
+</g>
+</svg>

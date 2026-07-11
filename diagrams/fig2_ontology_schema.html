@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mermaid Diagram</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        body { margin: 0; padding: 20px; background: white; }
+        .mermaid { max-width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="mermaid">graph LR
+    subgraph 实体类型[实体类型]
+        Crop[Crop<br/>作物]
+        Disease[Disease<br/>病害]
+        Symptom[Symptom<br/>症状]
+        Chemical[Chemical<br/>药剂]
+    end
+    
+    subgraph 关系类型[关系类型]
+        AFFECTS[AFFECTS<br/>发生于]
+        HAS_SYMPTOM[HAS_SYMPTOM<br/>具有症状]
+        RECOMMENDED_CHEMICAL[RECOMMENDED_CHEMICAL<br/>推荐药剂]
+        TREATED_BY[TREATED_BY<br/>治疗措施]
+        CAUSED_BY[CAUSED_BY<br/>病因]
+    end
+    
+    Crop ---|AFFECTS| Disease
+    Disease ---|HAS_SYMPTOM| Symptom
+    Disease ---|RECOMMENDED_CHEMICAL| Chemical
+    Disease ---|TREATED_BY| Treatment[Treatment<br/>防治措施]
+    Disease ---|CAUSED_BY| Cause[Cause<br/>病因]
+    
+    style Crop fill:#87CEEB,stroke:#333,stroke-width:2px;
+    style Disease fill:#FFB6C1,stroke:#333,stroke-width:2px;
+    style Symptom fill:#90EE90,stroke:#333,stroke-width:2px;
+    style Chemical fill:#FFDAB9,stroke:#333,stroke-width:2px;
+    style Treatment fill:#DDA0DD,stroke:#333,stroke-width:2px;
+    style Cause fill:#F0E68C,stroke:#333,stroke-width:2px;</div>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+:root {
+  --primary: #2e7d32;
+  --primary-light: #4caf50;
+  --primary-dark: #1b5e20;
+  --secondary: #1a237e;
+  --secondary-light: #3949ab;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #6b7280;
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-gradient-start: #f8fafc;
+  --bg-gradient-end: #ffffff;
+  --bg-sidebar: #1a237e;
+  --text-primary: #1f2937;
+  --text-regular: #4b5563;
+  --text-secondary: #6b7280;
+  --text-placeholder: #9ca3af;
+  --border-color: #e5e7eb;
+  --border-color-light: #f3f4f6;
+  --card-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+  --card-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.08);
+  --radius-base: 12px;
+  --radius-card: 20px;
+  --radius-button: 10px;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-size-base: 14px;
+  --font-size-small: 13px;
+  --font-size-large: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --transition-fast: 0.2s cubic-bezier(0.4,0,0.2,1);
+  --transition-base: 0.35s cubic-bezier(0.4,0,0.2,1);
+  --transition-slow: 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html {
+  font-size: var(--font-size-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  background-color: transparent;
+  line-height: 1.6;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#app { height: 100%; width: 100%; }
+.el-card {
+  border: none !important;
+  border-radius: var(--radius-card) !important;
+  box-shadow: var(--card-shadow) !important;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+.el-card:hover { box-shadow: var(--card-shadow-hover) !important; }
+.el-card__header {
+  border-bottom: 1px solid var(--border-color-light) !important;
+  padding: 16px 20px !important;
+  font-weight: 600;
+  font-size: var(--font-size-large);
+  color: var(--text-primary);
+}
+.el-card__body { padding: 20px !important; }
+.el-table { border-radius: 8px; overflow: hidden; }
+.el-table th.el-table__cell {
+  background-color: #fafafa !important;
+  color: var(--text-regular);
+  font-weight: 600;
+}
+.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell {
+  background-color: #f8faff !important;
+}
+.el-table__body tr:hover > td.el-table__cell {
+  background-color: #ecf5ff !important;
+}
+.el-tag { border: none !important; }
+.el-button--primary {
+  --el-button-bg-color: var(--primary);
+  --el-button-border-color: var(--primary);
+  --el-button-hover-bg-color: var(--primary-light);
+  --el-button-hover-border-color: var(--primary-light);
+  border-radius: var(--radius-button) !important;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+.el-button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46,125,50,0.3);
+}
+.el-button--default {
+  border-radius: var(--radius-button) !important;
+  transition: all var(--transition-fast);
+}
+.el-button--default:hover {
+  transform: translateY(-2px);
+}
+.el-input__wrapper, .el-select__wrapper { 
+  border-radius: var(--radius-base) !important; 
+  transition: all var(--transition-fast);
+}
+.el-input__wrapper:hover, .el-select__wrapper:hover {
+  box-shadow: 0 0 0 2px rgba(46,125,50,0.1);
+}
+.el-input__wrapper.is-focus, .el-select__wrapper.is-focus {
+  box-shadow: 0 0 0 3px rgba(46,125,50,0.15);
+}
+.el-menu { border-right: none !important; }
+.fade-slide-enter-active, .fade-slide-leave-active { transition: all 0.3s ease; }
+.fade-slide-enter-from { opacity: 0; transform: translateX(12px); }
+.fade-slide-leave-to { opacity: 0; transform: translateX(-12px); }
+.fade-enter-active, .fade-leave-active { transition: opacity 0.25s ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.mt-16 { margin-top: 16px; }
+.mt-20 { margin-top: 20px; }
+.mb-16 { margin-bottom: 16px; }

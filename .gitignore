@@ -1,0 +1,83 @@
+# ==================== Python ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+
+# ==================== 虚拟环境 ====================
+venv/
+env/
+ENV/
+.venv/
+
+# ==================== IDE ====================
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ==================== 日志和数据 ====================
+*.log
+*.log.*
+logs/
+backend/logs/
+
+# ==================== 模型文件（大型文件，不入库）====================
+# GGUF 模型文件（约 1GB）
+*.gguf
+*.ggml
+# PyTorch 模型权重
+checkpoints/*.pth
+checkpoints/*.pt
+*.pth
+*.pt
+# LSNet 训练产物
+lsnet/models/
+lsnet/results/
+lsnet/checkpoints/
+
+# ==================== 数据库文件 ====================
+*.db
+*.sqlite
+
+# ==================== 上传文件 ====================
+uploads/
+backend/uploads/
+
+# ==================== 前端 ====================
+node_modules/
+dist/
+.DS_Store
+.env
+.env.local
+.env.*.local
+.claude/
+.meta-kim/
+frontend/.claude/
+frontend/.meta-kim/
+
+# ==================== 临时文件 ====================
+*.tmp
+*.bak
+*.swp
+.cache/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ==================== 操作系统 ====================
+Thumbs.db
+.DS_Store
+desktop.ini
+*~
+
+# ==================== 测试和生成文件 ====================
+test-report/
+paper_materials/
+_plot_results/
+progress.md
+meta-kim-post-copy.mjs

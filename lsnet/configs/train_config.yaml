@@ -1,0 +1,52 @@
+# ==================== 模型架构配置 ====================
+model:
+  name: "lsnet"                  # 模型名称: lsnet, mobilenetv2, mobilenetv3, efficientnetb0, shufflenetv2, resnet18
+  num_classes: 9                 # 类别数
+  pretrained: true               # 是否使用预训练权重
+  width_mult: 1.0                # LSNet 通道宽度倍数
+
+# ==================== 训练超参数 ====================
+training:
+  epochs: 80
+  batch_size: 32
+  base_lr: 0.001
+  weight_decay: 0.0001
+  early_patience: 15
+  early_delta: 0.001
+  num_workers: 0
+
+# ==================== 优化器配置 ====================
+optimizer:
+  type: "adamw"                  # adamw, sgd, adam
+  momentum: 0.9                  # SGD 用
+
+# ==================== 学习率调度 ====================
+scheduler:
+  type: "cosine"                 # cosine, step, plateau
+  step_size: 30                  # StepLR
+  step_gamma: 0.1
+  t_max: 80                      # CosineAnnealing
+
+# ==================== 数据配置 ====================
+data:
+  train_ratio: 0.7
+  val_ratio: 0.1
+  test_ratio: 0.2
+  seed: 42
+  use_plantvillage: true
+  image_size: 224
+  use_class_weights: true        # 使用类别权重处理不平衡
+
+# ==================== 路径配置 ====================
+paths:
+  data_dir: "data/data1"
+  plantvillage_dir: "data/plantvillage"
+  checkpoints_dir: "checkpoints"
+  logs_dir: "logs"
+  results_dir: "results"
+
+# ==================== 推理配置 ====================
+inference:
+  device: "cuda"                 # cuda, cpu
+  confidence_threshold: 0.7
+  top_k: 3

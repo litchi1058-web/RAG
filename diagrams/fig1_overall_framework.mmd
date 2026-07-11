@@ -1,0 +1,72 @@
+graph TD
+    subgraph 数据输入层[数据输入层]
+        A1[叶片图像]
+        A2[植保图鉴]
+        A3[专业文献]
+        A4[农业技术资料]
+        A5[用户问题]
+    end
+    
+    subgraph 图像识别层[LSNet-CBAM图像识别层]
+        B1[图像预处理]
+        B2[LSNet主干网络]
+        B3[CBAM注意力机制]
+        B4[Softmax分类]
+        B5[病害类别+置信度]
+    end
+    
+    subgraph 知识组织层[Neo4j知识图谱构建层]
+        C1[结构化知识库]
+        C2[实体抽取]
+        C3[关系构建]
+        C4[Neo4j图数据库]
+    end
+    
+    subgraph 知识检索层[Cypher知识检索层]
+        D1[Disease节点映射]
+        D2[Cypher查询]
+        D3[知识片段提取]
+    end
+    
+    subgraph 诊断生成层[Qwen2-1.5B本地RAG诊断生成层]
+        E1[Prompt构造]
+        E2[Qwen2-1.5B-Instruct]
+        E3[诊断报告生成]
+        E4[智能问答]
+    end
+    
+    subgraph 应用展示层[Web应用展示层]
+        F1[前端界面]
+        F2[诊断报告展示]
+        F3[知识图谱可视化]
+        F4[用户交互]
+    end
+    
+    A1 --> B1
+    A2 --> C1
+    A3 --> C1
+    A4 --> C1
+    
+    B1 --> B2 --> B3 --> B4 --> B5
+    C1 --> C2 --> C3 --> C4
+    
+    B5 --> D1
+    D1 --> D2
+    D2 --> D3
+    C4 --> D2
+    
+    D3 --> E1
+    A5 --> E1
+    E1 --> E2
+    E2 --> E3
+    E2 --> E4
+    
+    E3 --> F2
+    E4 --> F4
+    C4 --> F3
+    F2 --> F1
+    F3 --> F1
+    F4 --> F1
+
+    classDef layer fill:#f9f,stroke:#333,stroke-width:2px;
+    class A1,A2,A3,A4,A5,B1,B2,B3,B4,B5,C1,C2,C3,C4,D1,D2,D3,E1,E2,E3,E4,F1,F2,F3,F4 layer;

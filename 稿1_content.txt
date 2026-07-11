@@ -1,0 +1,447 @@
+知识图谱增强的苹果樱桃叶片病害轻量级大模型诊断方法
+Knowledge-Graph-Enhanced Lightweight LLM Diagnosis for Apple and Cherry Leaf Diseases
+摘　要
+针对果树叶片病害图像识别结果难以直接转化为可解释防治建议的问题，提出一种知识图谱增强的苹果樱桃叶片病害轻量级大模型诊断方法。首先，采用VGG19预训练网络、迁移学习和CBAM注意力机制建立叶片病害识别模型，输出病害类别和置信度；其次，围绕作物、病害、症状、防治措施和药剂等要素构建结构化知识库与Neo4j知识图谱；进而，将识别结果映射为Disease节点，通过规则化图谱查询获取症状、病因、防治措施和推荐药剂等知识；最后，将识别结果、图谱检索结果和知识库字段作为提示词上下文，输入本地部署的Qwen2-1.5B-Instruct模型生成诊断报告和问答文本。试验结果表明，VGG19-CBAM模型识别准确率为94.05%，平均置信度为92.82%；系统平均响应时间为2.3 s，简单问答响应时间为1～2 s，复杂诊断报告生成时间为5～6 s。该方法实现了病害图像识别、图谱知识检索和本地大模型诊断生成的衔接，可为果树叶片病害辅助诊断提供技术参考。
+关键词：苹果；樱桃；叶片病害诊断；知识图谱；检索增强生成；轻量级大语言模型中图分类号：TP391.1；S436.6　　文献标识码：A
+0　引言
+苹果和樱桃是重要经济果树，病害识别与防治直接影响果品产量、品质和果园管理效率。据《2025年度中国苹果产业发展报告》，我国苹果种植面积和产量均居世界首位，年产量占全球50%以上；2025年全国苹果种植面积预计为2838.04万亩，总产量达5155.55万吨[1]。樱桃作为高价值落叶果树，USDA FAS报告估计中国2024/25季樱桃产量为85万t，种植面积约19.9万hm²，产业规模仍处于增长阶段[2]。苹果和樱桃虽分属不同属种，但均为高价值落叶果树，叶片病害多表现为斑点、变色、锈斑、霉层等视觉特征，图像识别和知识组织均可围绕“作物—病害—症状—防治措施—药剂”展开。因此，本文以苹果和樱桃为联合对象，构建面向果树叶片病害辅助诊断的知识图谱增强轻量级大模型方法。
+苹果黑星病、黑斑病、雪松锈病以及樱桃白粉病、褐斑病等病害若不能及时识别，不仅可能导致果品品质下降和产量损失，还容易引发用药不当和病害扩散。从农业生产安全看，农业农村部《2024年“虫口夺粮”保丰收行动方案》指出，2024年农作物重大病虫害预计发生面积23.3亿亩次，比2023年增加26.2%，对粮油作物生产构成压力[3]。传统人工诊断依赖植保经验和现场观察，受专业人员数量、服务半径和响应时效制约，难以满足分散化、高频次的果园病害初筛需求。
+近年来，智慧农业建设持续推进。2025年中央一号文件提出因地制宜发展农业新质生产力，支持发展智慧农业，拓展人工智能、数据、低空等技术应用场景[4]。2024年农业农村部印发《关于大力发展智慧农业的指导意见》和《全国智慧农业行动计划（2024—2028年）》，提出推进农业生产数字化和智能化转型，并明确到2028年底农业生产信息化率达到32%以上[5-6]。在此背景下，利用图像识别、知识图谱和大语言模型等技术提升果树病害识别、知识检索和辅助诊断能力，具有明确的现实需求。
+农业病虫害图像数据集建设涉及样本规模、类别均衡、标注一致性和真实场景覆盖等问题，直接影响模型训练效果和泛化能力[7]。在植物病害识别研究中，深度学习方法已被广泛用于叶片图像分类和病害诊断，卷积神经网络能够自动提取病斑颜色、纹理和形态特征[8-9]。VGG系列网络以规则化卷积结构增强了视觉特征提取能力[10]，CBAM等注意力机制则通过通道注意力和空间注意力提高模型对关键病斑区域的关注程度[11]。近年来，轻量化网络、小样本识别和边缘部署等研究进一步推动了病害图像识别在农业现场中的应用[12-13]。但已有研究多围绕数据集构建、模型优化和识别准确率提升展开，对农户和基层农技人员而言，模型输出的病害类别只是初步判断，仍需进一步获得病因、症状、防治措施、推荐药剂和注意事项。若识别结果不能与结构化植保知识关联，图像分类模型难以形成可解释、可执行的诊断建议。
+现有植物病害智能诊断研究正由单一图像分类逐步转向多源知识支撑的诊断解释与报告生成。将视觉模型与文本知识、农业知识图谱和语言模型结合，有助于推动病害诊断从类别判别走向证据支撑的辅助决策。已有GPT辅助农业图像诊断研究表明，视觉识别与语言生成结合可增强病害诊断解释能力[14]。从知识服务视角看，农业知识智能服务正在从信息检索、规则匹配向知识组织、智能问答和决策支持演进[15]。
+知识图谱通过结构化三元组表达实体间语义关联，能够将分散植保资料转化为可检索、可组织的知识网络[16]。在农业领域，作物病虫害可视化知识图谱、水产病害知识图谱和葡萄知识图谱等研究已经形成了本体层设计、实体层构建和Neo4j持久化的基本路径[17-19]。多模态知识图谱增强葡萄种植问答、农作物病虫害问答系统和果树病虫害知识图谱诊断等研究进一步说明，图谱结构能够支撑农业知识检索、问答和诊断解释[20-22]。但单纯基于知识图谱的问答系统通常依赖固定模板、命名实体识别或Cypher结构化查询，灵活性和自然语言表达能力有限，难以直接形成面向用户的诊断报告。
+农业知识驱动服务研究显示，农业知识组织、知识推理和智能问答正在成为智慧农业服务的重要技术方向[23]。大语言模型凭借语义理解和文本生成能力，在农业知识问答、果蔬农技咨询和垂直领域知识服务中展现出应用潜力[24-27]。不过，通用大语言模型在农业垂直领域仍存在专业知识覆盖不足、知识幻觉、生成内容不可控和部署成本较高等问题。中国农业大模型相关研究也指出，农业大模型应用仍面临数据治理、知识融合、应用验证和生态构建等挑战[28]。检索增强生成（retrieval-augmented generation，RAG）通过将外部知识检索与语言模型生成结合，能够在限定知识来源的基础上提升答案的依据性和可追溯性[29-30]。农业大语言模型研究亦开始强调精准知识检索与协同生成，以降低生成内容偏离领域知识的风险[31]。对于果树叶片病害诊断任务，如何将图像识别结果、结构化植保知识和本地轻量级大语言模型有效衔接，仍需进一步探索。
+果树叶片病害辅助诊断还存在用户信息输入不足和诊断语境缺失问题。上传图像可能受到光照、拍摄角度和病斑发育阶段影响，用户自然语言提问也可能缺少作物、发病时期、果园环境和用药历史等关键信息。澄清式农业知识图谱问答研究已开始关注农业问答中的歧义识别和补充提问问题[27]。对于病害诊断而言，若系统在证据不足时直接给出确定性诊断或用药建议，容易造成误判。因此，诊断生成过程需要结合识别置信度、检索证据和必要的复核提示，提高结果的可控性和应用边界清晰度。
+针对上述问题，本文以苹果与樱桃叶片病害诊断为应用场景，提出一种知识图谱增强的轻量级大模型诊断方法。与以知识抽取和图谱构建为主要目标的农业知识图谱研究不同，本文将知识图谱嵌入果树叶片病害诊断流程，利用VGG19-CBAM模型输出的病害类别和置信度定位Disease节点，并通过Neo4j图谱关系与结构化知识库检索症状、病因、防治措施和药剂等知识。在此基础上，将识别结果、图谱检索结果和知识库字段组织为提示词上下文，输入本地部署的Qwen2-1.5B-Instruct模型[32]，生成包含症状解释、防治建议、用药提示和风险提示的诊断报告。本文的主要贡献包括：1）构建了图像识别结果驱动的苹果樱桃病害知识检索链路，实现从病害类别输出到结构化植保知识调用的衔接；2）设计了知识图谱约束的本地轻量级大模型诊断生成流程，降低纯大模型生成中的知识幻觉和外部API依赖；3）形成了面向高价值落叶果树叶片病害的轻量级辅助诊断原型，为基层果园病害初筛和知识服务提供技术参考。
+1　诊断方法总体架构
+1.1　系统架构设计
+本文方法围绕“图像识别—知识检索—诊断生成—可信控制”过程展开，由数据输入层、图像识别层、知识组织与图谱构建层、识别结果驱动的知识检索层、本地RAG诊断生成层和应用验证层组成，如图1所示。
+数据输入层包括苹果与樱桃叶片图像、植保图鉴、专业文献、农业技术资料、公开农业资源和用户自然语言问题。图像识别层以VGG19为主干网络，结合ImageNet预训练权重、迁移学习和CBAM注意力机制，对输入叶片图像进行病害分类，输出病害类别和置信度。知识组织与图谱构建层包括本地结构化病害知识库和Neo4j知识图谱，知识内容涵盖病害名称、寄主作物、典型症状、病因、防治措施、推荐药剂和使用注意事项等。知识检索层以图像识别结果为查询入口，在本地结构化知识库和Neo4j知识图谱中检索相关植保知识。Neo4j采用属性图模型和Cypher查询语言支持图数据组织与查询[33]。本地RAG诊断生成层将识别结果、图谱检索结果和结构化知识字段整合为提示词上下文，输入本地部署的Qwen2-1.5B-Instruct模型，生成诊断报告或问答文本。应用验证层基于Flask框架实现图像上传、模型推理、知识检索、报告生成、智能问答和结果展示。Flask作为轻量级Web应用框架，适合原型系统中的后端服务构建[34]。
+图1　知识图谱增强的苹果樱桃叶片病害轻量级大模型诊断方法总体框架Fig.1 Overall framework of the knowledge-graph-enhanced lightweight LLM diagnosis method for apple and cherry leaf diseases【待绘制。建议绘制为横向六层流程图：数据输入层→图像识别层→知识组织与图谱构建层→识别结果驱动的知识检索层→本地RAG诊断生成层→应用验证层。图中应包括图像输入、VGG19-CBAM识别、Disease节点定位、结构化知识库、Neo4j知识图谱、规则化Cypher查询、Prompt构造、Qwen2-1.5B-Instruct生成、置信度/证据充分性判断、诊断报告、智能问答和Web端结果展示。图中不应出现LoRA微调、向量索引、NL2Cypher、AgenticGraphRAG或ReAct等未实现模块。】
+1.2　识别、检索与生成流程
+本文方法不是单纯的图像分类系统，也不是直接调用通用大语言模型生成答案，而是将图像识别结果转化为知识检索入口。系统首先对上传的苹果或樱桃叶片图像进行预处理，并由VGG19-CBAM模型输出病害类别和置信度；随后将识别类别映射为知识图谱中的Disease节点，通过Neo4j关系查询和本地结构化知识库检索获取病害症状、病因、防治措施和推荐药剂；最后将识别结果、检索知识和用户问题组织为提示词上下文，输入本地Qwen2-1.5B-Instruct模型生成诊断报告或问答文本。
+本文中结构化知识库和Neo4j知识图谱承担稳定知识源功能，本地Qwen2-1.5B-Instruct模型承担诊断报告生成和问答表达功能，二者共同实现从静态病害知识存储到动态诊断文本生成的衔接。与依赖外部API的大模型方法相比，本文采用轻量级模型本地离线部署，降低网络依赖和数据外传风险；与单纯知识图谱查询相比，本文通过轻量级大语言模型增强自然语言表达能力，使诊断结果能够以报告或问答形式呈现。
+2　苹果樱桃叶片病害知识图谱构建
+2.1　知识来源与质量控制
+本文围绕苹果与樱桃典型叶片病害构建病害知识库。病害对象包括苹果黑星病、苹果黑斑病、苹果雪松锈病、樱桃白粉病和樱桃褐斑病等。知识来源包括农业专业文献、植保资料、公开农业资源及系统整理的病害说明文本。
+果树病害防治知识分散于植保图鉴、专业文献、技术资料和网络农业资源中，存在表述不统一、粒度不一致和更新不及时等问题。为提高诊断生成的知识依据稳定性，本文以病害为核心组织知识条目，对病害名称、寄主作物、典型症状、病因、防治措施、推荐药剂和注意事项等字段进行规范化整理，并将整理后的知识同步至Neo4j图数据库，用于后续识别结果驱动的知识检索。
+表1　苹果樱桃叶片病害知识来源及处理方式Table 1 Knowledge sources and processing methods for apple and cherry leaf diseases
+来源类型
+主要内容
+处理方式
+进入知识库字段
+数量
+植保图鉴
+病害症状、图像描述、病害别名
+人工摘录、术语规范化
+病害名称、典型症状
+【待补充】
+专业文献
+病因、症状、防治措施
+人工筛选、一致性检查
+病因、症状、防治措施
+【待补充】
+农业技术资料
+绿色防控、药剂使用、注意事项
+去重、字段化整理
+防治措施、推荐药剂、注意事项
+【待补充】
+公开农业资源
+病害说明、管理建议
+来源核验、病害名称标准化
+病害描述、管理建议
+【待补充】
+系统整理文本
+本地知识条目
+结构化字段录入
+全部字段
+【待补充】
+注：数量和来源名称应以实际知识库建设记录为准。药剂名称、适用对象和安全间隔期应依据权威植保资料或农药登记信息核对。Note: The number and source names should be based on the actual construction records of the knowledge base. Pesticide names, applicable targets, and safety intervals should be verified according to authoritative plant protection materials or pesticide registration information.
+2.2　本体层设计
+本体层用于规定苹果樱桃叶片病害知识图谱中的核心概念、概念层级、对象关系和数据属性。本文围绕叶片病害辅助诊断任务构建领域本体。首先确定知识范围，包括作物、病害、症状、防治措施、药剂和注意事项；其次归纳病害诊断所需的核心要素；再次建立作物、病害、症状和药剂之间的层次与关联；最后定义实体属性和实体关系，为Neo4j知识图谱构建提供模式约束。该处理思路与农业知识图谱中“本体层—实体层—持久化存储”的构建路径一致[18-19]。
+结合诊断报告生成需求，本文将图谱核心概念划分为Crop、Disease、Symptom、Pesticide等实体类型。病因、防治措施、注意事项和严重程度等描述性信息可根据实际建模方式作为Disease节点属性，或在系统需要时扩展为Cause、Treatment、Warning等独立节点。当前稿件应以实际Neo4j建模结果为准，不能将尚未建成节点的字段画成独立实体。
+图2　苹果樱桃叶片病害知识图谱本体模式Fig.2 Ontology schema of the apple and cherry leaf disease knowledge graph【待绘制。建议采用实体、关系、属性分层图。实体包括Crop、Disease、Symptom、Pesticide；关系包括occur_on、has_symptom、use_pesticide。Cause、Treatment、Warning若为属性，应画在Disease节点下方的属性框中；若实际已建模为节点，可作为独立节点呈现。】
+2.3　实体层构建与属性组织
+实体层用于在本体约束下填充具体病害、作物、症状、药剂和防治信息。为提高病害识别结果与防治知识之间的匹配稳定性，本文将苹果与樱桃叶片病害知识划分为实体、关系和属性三类要素。其中，实体包括作物、病害、症状和药剂；关系用于描述病害与作物、症状、药剂之间的语义关联；属性用于记录病因、防治措施、用药注意事项和严重程度等描述性信息。该设计既保留了知识图谱在实体关系检索方面的优势，也降低了轻量级原型系统中过度细分实体类型带来的建模复杂度。
+表2　苹果樱桃叶片病害知识图谱实体、关系与属性设计Table 2 Entity, relation, and attribute design of the apple and cherry leaf disease knowledge graph
+类型
+名称
+含义
+示例
+存储方式
+数量
+实体
+Crop
+作物
+苹果、樱桃
+节点
+【待导出】
+实体
+Disease
+病害
+苹果黑星病、樱桃白粉病
+节点
+【待导出】
+实体
+Symptom
+症状
+【待补充真实症状】
+节点
+【待导出】
+实体
+Pesticide
+药剂
+【待补充真实药剂】
+节点
+【待导出】
+属性
+cause
+病因描述
+【待补充】
+Disease属性或节点
+【待确认】
+属性
+treatment
+防治措施
+【待补充】
+Disease属性或Treatment节点
+【待确认】
+属性
+warning
+用药或防治风险提示
+【待补充】
+Disease属性或Warning节点
+【待确认】
+关系
+occur_on
+病害发生于作物
+Disease→Crop
+关系
+【待导出】
+关系
+has_symptom
+病害表现为症状
+Disease→Symptom
+关系
+【待导出】
+关系
+use_pesticide
+病害推荐用药
+Disease→Pesticide
+关系
+【待导出】
+注：实体、关系和属性类型应以Neo4j实际建模结果为准。若Treatment、Cause、Warning已建模为独立节点，可在正式稿中相应调整。Note: Entity, relation, and attribute types should be based on the actual Neo4j schema. If Treatment, Cause, or Warning has been modeled as an independent node, the formal manuscript should be adjusted accordingly.
+表3　苹果樱桃叶片病害知识库条目示例Table 3 Examples of apple and cherry leaf disease knowledge base entries
+病害名称
+寄主作物
+典型症状
+病因
+防治措施
+推荐药剂
+注意事项
+苹果黑星病
+苹果
+【待补充真实症状】
+【待补充真实病因】
+【待补充真实措施】
+【待补充真实药剂】
+【待补充真实注意事项】
+苹果雪松锈病
+苹果
+【待补充真实症状】
+【待补充真实病因】
+【待补充真实措施】
+【待补充真实药剂】
+【待补充真实注意事项】
+樱桃白粉病
+樱桃
+【待补充真实症状】
+【待补充真实病因】
+【待补充真实措施】
+【待补充真实药剂】
+【待补充真实注意事项】
+注：表中内容必须由实际知识库导出后补充，不能临时编写。Note: The contents of this table must be supplemented from the actual knowledge base rather than manually fabricated.
+2.4　Neo4j存储与规则化查询
+在结构化知识库基础上，本文采用Neo4j图数据库构建苹果与樱桃叶片病害知识图谱。系统将整理后的实体、属性和关系导入Neo4j，实现病害知识的图结构存储。以病害节点为中心，图谱可展示“作物—病害—症状—药剂”之间的关联关系。用户或系统选中某一病害节点后，可检索其寄主作物、典型症状、防治措施和推荐药剂等信息。
+本文采用规则化图谱查询方式，不涉及自动NL2Cypher生成，也不涉及AgenticGraphRAG中的动态工具调度。正式稿应补充真实Cypher查询语句。例如，按病害名称检索症状、防治措施和推荐药剂，或按症状反向检索可能病害。若系统目前未实现症状反查，不应写入该功能。
+表4　Neo4j知识图谱规模统计与查询示例Table 4 Scale statistics and query examples of the Neo4j knowledge graph
+项目
+内容
+数值或语句
+Disease节点数
+病害节点数量
+【待导出】
+Crop节点数
+作物节点数量
+【待导出】
+Symptom节点数
+症状节点数量
+【待导出】
+Pesticide节点数
+药剂节点数量
+【待导出】
+关系总数
+occur_on、has_symptom、use_pesticide等
+【待导出】
+三元组总数
+图谱关系三元组总量
+【待导出】
+查询示例1
+按病害名称检索相关知识
+【待补充真实Cypher语句】
+查询示例2
+按症状检索可能病害
+【若系统未实现症状反查，则删除】
+图3　苹果黑星病局部知识图谱及检索路径Fig.3 Local knowledge graph and retrieval path of apple scab【待绘制。建议以苹果黑星病或樱桃白粉病为中心节点，展示其与作物、典型症状、防治措施和推荐药剂的一阶关系。图中节点不宜过多，重点突出“识别结果如何驱动知识检索”。】
+3　图像识别驱动的检索增强生成方法
+3.1　VGG19-CBAM病害识别模型
+本文采用VGG19作为叶片图像特征提取主干网络，结合ImageNet预训练权重进行迁移学习，并在高层特征处加入CBAM注意力机制。VGG19模型通过多层卷积结构提取叶片图像纹理、颜色和病斑形态特征；CBAM模块从通道维度和空间维度对特征图进行加权，使模型更加关注病斑区域，降低背景信息对分类结果的干扰[10-11]。模型输入为224×224×3的RGB图像，输出为病害类别概率分布。系统取最高概率类别作为诊断流程的识别结果，并返回置信度。
+图像预处理包括尺寸归一化、中心裁剪和标准化。原始图像先将短边缩放至256像素，并保持宽高比不变，再中心裁剪为224×224像素。标准化采用ImageNet均值和标准差，均值为0.485、0.456、0.406，标准差为0.229、0.224、0.225。训练阶段采用随机旋转、水平翻转、垂直翻转、随机裁剪、颜色扰动、随机灰度化和随机擦除等数据增强策略，以扩充训练样本分布并降低过拟合风险。
+本文不将图像识别模型作为唯一研究重点，而将其作为知识检索和诊断生成的前端识别入口。模型输出的病害类别用于定位知识图谱中的Disease节点，置信度用于诊断报告中的风险提示和结果解释。
+正式稿需统一数据集分类标签口径。若当前图像识别任务实际包含健康类、病害类及一般/严重等级，应在4.1节和表6中明确分类标签数量、类别名称及每类样本数。
+3.2　识别结果驱动的图谱检索
+系统获得病害识别结果后，将病害类别作为查询关键词，在本地结构化知识库和Neo4j知识图谱中检索相关知识。具体流程为：首先，根据VGG19-CBAM模型输出类别定位对应Disease节点；其次，沿occur_on、has_symptom、use_pesticide等关系检索寄主作物、典型症状和推荐药剂；再次，读取结构化知识库中与该病害对应的病因、症状、防治和用药字段；最后，将图像识别结果、图谱检索结果和结构化知识字段整合为大语言模型输入上下文。
+表5　识别结果驱动的知识检索规则Table 5 Knowledge retrieval rules driven by recognition results
+识别输出
+映射对象
+检索关系或字段
+返回知识
+用途
+病害类别
+Disease节点
+disease_name
+病害名称
+定位图谱节点
+作物类别
+Crop节点
+occur_on
+寄主作物
+校验识别对象
+病害节点
+Symptom节点
+has_symptom
+典型症状
+生成症状说明
+病害节点
+treatment字段或Treatment节点
+treatment / treated_by
+防治措施
+生成防治建议
+病害节点
+Pesticide节点
+use_pesticide
+推荐药剂
+生成用药提示
+置信度
+模型输出字段
+confidence
+识别可信度
+生成风险提示
+注：若实际系统未实现作物类别校验、Top-3候选类别或低置信度策略，应删除相关功能描述。Note: If crop verification, Top-3 candidate categories, or low-confidence handling is not implemented in the actual system, the corresponding functional description should be removed.
+该检索方式区别于单纯模板填充。系统不是仅根据分类结果调用固定文本，而是通过结构化知识库和图谱关系获取与病害相关的知识片段，再将其作为大语言模型生成诊断报告的依据。若图像识别置信度较低，系统可在报告中提示用户结合症状和人工判断进行复核。该低置信度处理策略目前可作为系统设计说明，若未实现自动阈值控制，不应写成已经完成的实验功能。
+图4　图像识别结果驱动的本地RAG诊断生成流程Fig.4 Local RAG diagnostic generation process driven by image recognition results【待绘制。建议流程为：叶片图像→VGG19-CBAM识别→病害类别与置信度→Disease节点映射→Cypher查询→知识库字段补充→置信度/证据充分性判断→Prompt构造→Qwen2-1.5B-Instruct→诊断报告/复核提示。】
+3.3　本地轻量级大模型诊断生成
+本文采用本地部署的Qwen2-1.5B-Instruct作为诊断报告和问答文本生成模型。Qwen2系列覆盖多个参数规模的基础模型和指令微调模型，并支持开源社区中的量化、微调与部署应用[32]。本文采用GGUF格式Q4_K_M量化版本，原始参数规模为1.5B，量化后模型文件大小约0.9GB。系统基于llama-cpp-python框架实现本地离线推理[35]，未调用外部API。Web服务基于Flask 2.x搭建，图数据库采用Neo4j 4.x。为避免大语言模型推理阻塞Web主服务，系统将大语言模型封装为独立子进程，Flask后端主服务通过标准输入输出与子进程完成交互调用。
+大语言模型调用逻辑分布于后端工程业务逻辑层，主要涉及RAG诊断引擎模块和AI问答功能模块。RAG诊断引擎模块负责根据图像识别结果和知识检索结果生成病害诊断报告；AI问答功能模块负责围绕病害症状、防治措施和用药建议进行自然语言交互。模型调用逻辑与Neo4j知识图谱检索模块、图像识别推理模块联动，形成“识别—检索—生成”的诊断流程。
+本文RAG框架的生成环节由本地Qwen2-1.5B-Instruct完成，并非固定模板或硬编码规则填充。系统首先通过Neo4j知识图谱和本地结构化知识库完成知识检索，将检索到的植保专业知识、图像识别结果和用户问题整合为上下文，拼接为提示词后输入大语言模型；大语言模型基于输入内容生成诊断报告与问答文本。检索环节采用规则化匹配和图谱查询策略，生成环节依赖大语言模型的自然语言生成能力。
+Prompt输入字段包括病害类别、识别置信度、寄主作物、典型症状、病因、防治措施、推荐药剂、注意事项和用户问题。Prompt输出要求包括诊断摘要、症状解释、防治建议、用药提示和风险提示。若实际系统未设置注意事项或风险提示字段，应在正式稿中删除对应内容。
+本地部署并不直接保证生成内容的事实正确性，但能够提高系统的数据可控性、运行可复现性和调用过程可审计性。本文将本地Qwen2-1.5B-Instruct模型限定在知识图谱和结构化知识库提供的上下文中生成诊断报告，使生成内容尽量围绕可追溯的植保知识展开，从而降低纯大模型凭参数记忆生成所带来的知识幻觉风险。
+3.4　诊断生成的可信控制策略
+为提高诊断报告的可控性，系统在生成阶段设置知识约束和风险提示规则。首先，Prompt上下文仅由图像识别结果、Neo4j检索结果和结构化知识库字段组成，避免模型脱离检索证据自由生成。其次，当识别置信度低于设定阈值或知识库未覆盖对应病害时，报告中提示用户进行人工复核。再次，涉及药剂使用时，系统仅输出知识库中已有的推荐信息，不生成知识库之外的剂量、频次和安全间隔期。最后，系统记录识别结果、检索路径和生成文本，为后续人工核验和错误追踪提供依据。
+本文系统生成的诊断报告属于知识库约束下的辅助诊断结果，并不等同于最终植保处方。其可信性主要受图像识别模型性能、知识库覆盖范围、Neo4j检索准确性和大语言模型对检索知识的遵循程度影响。对于低置信度图像、混合感染、复杂田间背景、病害早期症状不明显或用药风险较高的情形，应提示用户结合田间实际情况或专业人员意见进行复核。后续可进一步引入澄清式交互机制，使系统在证据不足或问题歧义较强时主动提示用户补充发病部位、发生时期、果园环境和用药历史等信息。
+4　试验与结果分析
+4.1　数据集、知识库与实验环境
+本文构建苹果与樱桃叶片病害图像数据集，共包含840张图像。图像来源包括公开数据集和网络采集图像，人工标注后用于模型训练与验证。病害类型包括苹果黑星病、苹果黑斑病、苹果雪松锈病、樱桃白粉病和樱桃褐斑病。数据集按照8∶2比例划分训练集和验证集，并采用分层抽样策略保持类别分布一致。
+需要说明的是，当前材料中存在“5类典型病害”与“9个分类标签”之间的口径差异。正式稿应统一分类体系。建议将表述调整为：本文图像识别任务以健康叶片及典型病害叶片为分类对象，其中病害类型包括苹果黑星病、苹果黑斑病、苹果雪松锈病、樱桃白粉病和樱桃褐斑病；根据样本标注情况，部分病害进一步区分一般和严重等级。
+模型训练环境为Windows 10操作系统、PyTorch深度学习框架、CUDA 11.0、NVIDIA RTX 2060 GPU、Intel Core i7处理器和16GB内存。大语言模型推理环境为Python 3.8及以上，模型采用Qwen2-1.5B-Instruct的GGUF Q4_K_M量化版本，支持CPU本地离线运行。
+表6　数据集、模型配置与识别性能Table 6 Dataset, model configuration, and recognition performance
+类别
+指标
+数值或配置
+说明
+图像数据
+图像总数
+840张
+需核对各类别分布
+图像数据
+数据划分
+8∶2
+训练集与验证集
+图像数据
+分类标签
+【待补充】
+需统一5类病害与9个标签口径
+图像识别
+主干网络
+VGG19
+ImageNet预训练
+图像识别
+注意力机制
+CBAM
+通道注意力与空间注意力
+图像识别
+输入尺寸
+224×224×3
+RGB图像
+图像识别
+整体准确率/%
+94.05
+当前模型结果
+图像识别
+平均置信度/%
+92.82
+当前模型结果
+大语言模型
+模型名称
+Qwen2-1.5B-Instruct
+本地部署
+大语言模型
+量化格式
+GGUF Q4_K_M
+模型约0.9GB
+Web服务
+框架
+Flask 2.x
+本地部署
+图数据库
+数据库
+Neo4j 4.x
+图谱存储
+4.2　图像识别性能分析
+VGG19-CBAM模型在当前数据集上的整体准确率为94.05%，平均置信度为92.82%。从已有结果看，模型对多数类别具有较好识别效果，苹果黑斑病一般、苹果雪松锈病一般、苹果雪松锈病严重、樱桃健康和樱桃白粉病严重等类别准确率达到95%以上。苹果健康类别准确率为90.0%。苹果黑星病严重和樱桃白粉病一般识别效果相对较低，准确率分别为75.0%和80.0%。
+类别识别差异可能与样本不均衡和病害症状相似有关。苹果黑星病严重类别准确率较低，可能是因为同一病害不同严重程度之间存在病斑融合、颜色加深和纹理变化等特征重叠，模型在细粒度等级区分上存在困难。樱桃白粉病一般类别准确率低于严重类别，可能与早期症状不明显、粉状霉层覆盖面积较小及光照条件变化有关。苹果雪松锈病严重类别样本数量仅为40张，虽然当前准确率达到100.0%，但样本数量偏少可能导致泛化能力评价不足。
+正式稿应补充Precision、Recall和F1-score。如果原始预测结果仍在，应重新计算宏平均和各类别指标，以提高模型评价完整性。若无独立测试集，正文应使用“验证集”而不是“测试集”。
+4.3　知识图谱构建结果
+本文构建的苹果樱桃叶片病害知识图谱以Disease节点为中心，组织作物、症状、防治措施和药剂等知识。知识图谱用于支持图像识别结果驱动的知识检索，使识别类别能够进一步关联结构化植保知识。
+正式稿应补充Neo4j实际导出结果，包括节点数量、关系数量、三元组数量和典型病害局部子图。若当前图谱规模较小，应如实表述为“面向原型系统的轻量级病害知识图谱”，不应夸大为大规模图谱。
+本节建议补充：1）Neo4j图谱规模统计；2）以苹果黑星病或樱桃白粉病为核心的一阶子图；3）按病害名称检索症状、防治措施和推荐药剂的真实Cypher语句；4）查询返回结果示例。
+4.4　诊断生成案例与评价
+为验证知识库和本地大语言模型在诊断报告生成中的作用，本文设置典型病害样本进行诊断生成案例分析。每个案例包括输入图像、VGG19-CBAM识别结果、模型置信度、知识图谱检索结果和Qwen2-1.5B-Instruct生成结果。建议选择苹果黑星病、苹果雪松锈病和樱桃白粉病作为案例，分别覆盖易混淆病害、样本不均衡类别和樱桃病害类别。
+表7　典型病害诊断生成案例与证据来源Table 7 Typical diagnostic generation cases and evidence sources for fruit tree leaf diseases
+案例
+图像识别结果
+置信度/%
+检索证据来源
+生成报告摘要
+人工核验结论
+案例1
+苹果黑星病
+【待补充】
+知识库字段、Disease节点、Symptom关系、Pesticide关系
+【待补充真实生成结果摘要】
+【待补充】
+案例2
+苹果雪松锈病
+【待补充】
+知识库字段、Disease节点、Symptom关系、Pesticide关系
+【待补充真实生成结果摘要】
+【待补充】
+案例3
+樱桃白粉病
+【待补充】
+知识库字段、Disease节点、Symptom关系、Pesticide关系
+【待补充真实生成结果摘要】
+【待补充】
+注：生成报告摘要应由系统实际输出压缩整理，不应临时编写。Note: The summary of the generated diagnostic report should be condensed from the actual system output rather than manually fabricated.
+若条件允许，可进一步设置3种方法进行人工评价：仅输出识别类别、识别结果结合结构化知识字段展示、识别结果结合Neo4j检索和Qwen2-1.5B生成。评价维度可包括知识一致性、完整性、可读性、实用性和风险提示充分性。若未完成专家评分，正文只能保留典型案例分析，不能写“显著提升”或百分比提升。
+4.5　系统实现与智能问答验证
+为验证诊断方法在Web端的集成效果，本文基于Flask框架实现苹果樱桃叶片病害辅助诊断系统。系统主要包括图像上传、病害识别、诊断报告生成、知识图谱检索和AI问答交互等功能。用户上传叶片图像后，系统首先调用VGG19-CBAM模型输出病害类别和置信度，再通过Neo4j知识图谱和本地结构化知识库检索相关症状、病因、防治措施和推荐药剂，最后由本地Qwen2-1.5B-Instruct模型生成诊断报告。用户也可在问答界面围绕病害症状、防治措施、用药提示和复核建议进行自然语言提问。
+智能问答模块不是独立于诊断流程的通用聊天功能，而是基于病害知识库、Neo4j检索结果和大语言模型生成能力形成的应用交互模块。其作用在于将结构化病害知识转化为面向用户的自然语言解释，补充诊断报告中的细节说明，并在低置信度或证据不足时提示用户进行人工复核。
+图5　苹果樱桃叶片病害诊断报告与智能问答界面Fig.5 Diagnostic report and intelligent question-answering interface for apple and cherry leaf diseases【建议采用两个子图：图5a为诊断报告生成界面，展示上传图像、识别结果、置信度和诊断报告；图5b为智能问答界面，展示用户问题、系统回答及症状/防治/用药提示。若界面仅为普通聊天窗口，应与诊断报告界面合并展示，避免弱化技术含量。】
+表8　典型问答案例与知识来源Table 8 Typical question-answering cases and knowledge sources
+问题类型
+用户问题
+检索证据来源
+系统回答摘要
+人工核验结论
+症状解释
+苹果黑星病有什么典型症状？
+Disease节点、Symptom关系、知识库症状字段
+【待补充系统实际回答摘要】
+【待补充】
+防治建议
+樱桃白粉病如何防治？
+Disease节点、treatment字段、Pesticide节点
+【待补充系统实际回答摘要】
+【待补充】
+用药提示
+这种病害是否可以直接喷药？
+推荐药剂字段、注意事项字段、风险提示规则
+【待补充系统实际回答摘要】
+【待补充】
+注：问答案例应来源于系统真实交互记录，并对涉及药剂、剂量和安全间隔期的内容进行人工核验。Note: The question-answering cases should be collected from real system interaction records, and pesticide-related information should be manually verified.
+4.6　系统响应性能与应用边界
+系统响应性能包括图像识别响应、大语言模型问答响应和诊断报告生成响应。根据现有测试结果，系统在单用户场景下平均响应时间为2.3 s。大语言模型本地推理中，简单AI问答响应耗时约1～2 s，复杂病害诊断报告或长文本问答耗时约5～6 s。该结果说明，在本地轻量化模型和普通硬件条件下，系统能够完成病害识别、知识检索、诊断报告生成和问答交互。
+表9　系统响应时间测试结果Table 9 Response time test results of the system
+任务类型
+平均响应时间/s
+测试次数
+最小值/s
+最大值/s
+标准差
+图像识别与结果返回
+2.3
+【待补充】
+【待补充】
+【待补充】
+【待补充】
+简单AI问答
+1～2
+【待补充】
+【待补充】
+【待补充】
+【待补充】
+复杂诊断报告生成
+5～6
+【待补充】
+【待补充】
+【待补充】
+【待补充】
+注：正式论文中建议至少测试30次，报告平均值、最小值、最大值和标准差。若不同硬件环境下响应时间差异较大，应注明硬件条件和是否启用GPU。Note: In the formal manuscript, at least 30 tests are recommended, and the mean, minimum, maximum, and standard deviation should be reported.
+5　结论
+本文针对果树叶片病害图像识别结果难以直接转化为可解释防治建议的问题，提出一种知识图谱增强的苹果樱桃叶片病害轻量级大模型诊断方法。该方法以VGG19-CBAM模型作为图像识别入口，输出病害类别和置信度；以本地结构化知识库和Neo4j知识图谱组织病害、作物、症状、防治措施和药剂等知识；以本地部署的Qwen2-1.5B-Instruct大语言模型生成诊断报告和问答文本，实现了病害识别、知识检索、自然语言诊断生成和智能问答交互的衔接。
+试验结果表明，VGG19-CBAM模型在当前数据集上的整体准确率为94.05%，平均置信度为92.82%；系统平均响应时间为2.3 s，简单AI问答响应时间为1～2 s，复杂病害诊断报告或长文本问答响应时间为5～6 s。结果说明，该方法具备原型系统应用可行性，能够为果树叶片病害辅助诊断服务提供技术参考。
+本文方法的主要价值不在于提出新的图像识别模型或大语言模型，而在于将果树叶片图像识别、Neo4j结构化知识检索和本地轻量级大模型诊断生成连接为可验证的辅助诊断流程。该流程通过知识图谱约束生成内容，通过本地部署提高数据和运行可控性，并通过置信度和证据不足提示明确应用边界。智能问答模块进一步增强了诊断结果的交互解释能力，但其功能定位仍属于诊断方法的应用验证，而非独立问答模型训练。
+受数据规模、知识覆盖范围和真实田间验证条件限制，本文方法仍需进一步完善。后续应重点补充Neo4j图谱规模统计、真实Cypher查询示例、诊断报告专家评价、问答结果人工核验和复杂田间环境测试结果，并进一步探索低置信度场景下的澄清式交互机制，以提高系统的可验证性、泛化能力和生产应用价值。
+参考文献
+[1] 农民日报. 《2025年度中国苹果产业发展报告》发布——产业规模与生产消费总量稳居全球首位[EB/OL]. (2026-05-11)[2026-06-02].
+[2] USDA Foreign Agricultural Service. Stone Fruit Annual: China - People’s Republic of[R]. Beijing: USDA FAS, 2024.
+[3] 农业农村部办公厅. 2024年“虫口夺粮”保丰收行动方案[Z]. 2024.
+[4] 中共中央 国务院. 关于进一步深化农村改革扎实推进乡村全面振兴的意见[Z]. 2025.
+[5] 农业农村部. 关于大力发展智慧农业的指导意见[Z]. 2024.
+[6] 农业农村部. 全国智慧农业行动计划（2024—2028年）[Z]. 2024.
+[7] 管博伦, 张立平, 朱静波, 等. 农业病虫害图像数据集构建关键问题及评价方法综述[J]. 智慧农业（中英文）, 2023, 5(3): 17-34.
+[8] MOHANTY S P, HUGHES D P, SALATHÉ M. Using deep learning for image-based plant disease detection[J]. Frontiers in Plant Science, 2016, 7: 1419.
+[9] FERENTINOS K P. Deep learning models for plant disease detection and diagnosis[J]. Computers and Electronics in Agriculture, 2018, 145: 311-318.
+[10] SIMONYAN K, ZISSERMAN A. Very deep convolutional networks for large-scale image recognition[EB/OL]. (2014-09-04)[2026-06-03]. https://arxiv.org/abs/1409.1556.
+[11] WOO S, PARK J, LEE J Y, et al. CBAM: Convolutional block attention module[C]//Proceedings of the European Conference on Computer Vision. Cham: Springer, 2018: 3-19.
+[12] 黄铝文, 关非凡, 谦博, 等. 基于2D DWT与MobileNetV3融合的轻量级茶叶病害识别[J]. 农业工程学报, 2023, 39(24): 207-214.
+[13] 李子茂, 徐杰, 郑禄, 等. 基于改进DenseNet的茶叶病害小样本识别方法[J]. 农业工程学报, 2022, 38(10): 182-190.
+[14] QING J, DENG X, LAN Y, et al. GPT-aided diagnosis on agricultural image based on a new light YOLOPC[J]. Computers and Electronics in Agriculture, 2023, 213: 108168.
+[15] 赵春江. 农业知识智能服务技术综述[J]. 智慧农业（中英文）, 2023, 5(2): 126-148.
+[16] 穆维松, 刘天琪, 苗子溦, 等. 知识图谱技术及其在农业领域应用研究进展[J]. 农业工程学报, 2023, 39(16): 1-12.
+[17] 吴赛赛, 周爱莲, 谢能付, 等. 基于深度学习的作物病虫害可视化知识图谱构建[J]. 农业工程学报, 2020, 36(24): 177-185.
+[18] 姜丽华, 赵瑞雪, 董春岩, 等. 基于深度学习的水产病害可视化知识图谱构建与验证[J]. 农业工程学报, 2023, 39(15): 260-268.
+[19] 聂啸林, 张礼麟, 牛当当, 等. 面向葡萄知识图谱构建的多特征融合命名实体识别[J]. 农业工程学报, 2024, 40(3): 201-210.
+[20] 杨硕, 李书琴. 多模态知识图谱增强葡萄种植问答对的答案选择模型[J]. 农业工程学报, 2023, 39(14): 207-214.
+[21] 赵泽行, 吴晓鹏, 王怡馨, 等. 基于知识图谱的农作物病虫害问答系统研究[J]. 智能化农业装备学报（中英文）, 2024, 5(4): 39-50.
+[22] GUAN L, ZHANG J, GENG C. Diagnosis of fruit tree diseases and pests based on agricultural knowledge graph[J]. Journal of Physics: Conference Series, 2021, 1865(4): 042052.
+[23] 王元胜, 吴华瑞, 赵春江. 农业知识驱动服务技术革新综述与前沿[J]. 农业工程学报, 2024, 40(7): 1-16.
+[24] 王婷, 王娜, 崔运鹏, 等. 基于人工智能大模型技术的果蔬农技知识智能问答系统[J]. 智慧农业（中英文）, 2023, 5(4): 105-116.
+[25] ZHAO B, JIN W Q, DEL SER J, et al. ChatAgri: Exploring potentials of ChatGPT on cross-linguistic agricultural text classification[J]. Neurocomputing, 2023, 557: 126708.
+[26] 裴国权, 钱雪英, 周兵, 等. 基于轻量级大语言模型的茶叶智能问答方法[J]. 农业工程学报, 2025, 41(15): 174-182.
+[27] 邹佳贤, 陈雷, 何浩楠, 等. 基于大语言模型的澄清式玉米知识图谱问答方法[J]. 农业工程学报, 2026, 42(5): 223-234.
+[28] 欧阳峥峥, 马毓聪, 寇远涛, 等. 中国农业大模型数据治理、核心技术与应用挑战[J]. 农业工程学报, 2025, 41(24): 153-162.
+[29] LEWIS P, PEREZ E, PIKTUS A, et al. Retrieval-augmented generation for knowledge-intensive NLP tasks[J]. Advances in Neural Information Processing Systems, 2020, 33: 9459-9474.
+[30] ZHAO P, ZHANG H, YU Q, et al. Retrieval-augmented generation for AI-generated content: A survey[EB/OL]. (2024-02-29)[2026-06-03]. https://doi.org/10.48550/arXiv.2402.19473.
+[31] 姜京池, 闫莲, 刘劼. 基于精准知识筛选及知识协同生成的农业大语言模型[J]. 智慧农业（中英文）, 2025, 7(1): 20-32.
+[32] YANG A, YANG B S, HUI B, et al. Qwen2 technical report[EB/OL]. (2024-07-15)[2026-06-03]. https://doi.org/10.48550/arXiv.2407.10671.
+[33] Neo4j. Cypher Manual: Introduction[EB/OL]. [2026-06-03]. https://neo4j.com/docs/cypher-manual/current/introduction/.
+[34] Pallets Projects. Flask Documentation[EB/OL]. [2026-06-03]. https://flask.palletsprojects.com/.
+[35] ABETLEN M, et al. llama-cpp-python: Python bindings for llama.cpp[EB/OL]. [2026-06-03]. https://github.com/abetlen/llama-cpp-python.
+Abstract
+Image-based disease recognition can provide disease categories and confidence scores for fruit tree leaves, but such outputs are often insufficient for practical disease management because farmers and grassroots technicians also need symptom descriptions, causes, control measures, pesticide-use suggestions, and risk warnings. To connect visual recognition results with interpretable diagnostic recommendations, this study proposed a knowledge-graph-enhanced lightweight large language model method for apple and cherry leaf disease diagnosis.
+First, a leaf disease recognition model was constructed using VGG19 as the backbone network. ImageNet pre-trained weights, transfer learning, and the convolutional block attention module were used to improve feature extraction from disease spots. The input image size was 224 × 224 × 3, and the model output included the predicted disease category and confidence score. Second, a structured disease knowledge base was organized around disease name, host crop, typical symptom, cause, control measure, recommended pesticide, and warning information. Based on this knowledge base, a Neo4j knowledge graph was constructed to represent semantic associations among crops, diseases, symptoms, treatments, and pesticides. The predicted disease label was mapped to the corresponding Disease node, and rule-based graph queries were used to retrieve related plant-protection knowledge through relations such as occur_on, has_symptom, treated_by, and use_pesticide.
+Third, a retrieval-augmented diagnostic generation process was designed. The retrieved graph knowledge and local structured knowledge fields were combined with the recognition result and user question to form the prompt context. Qwen2-1.5B-Instruct was deployed locally as the generation model in GGUF Q4_K_M quantized format using llama-cpp-python. The model was called by the Flask backend through an independent subprocess, and no external application programming interface was used. The generated output included a diagnostic summary, symptom explanation, control recommendation, pesticide-use suggestion, and risk warning.
+Experimental results showed that the VGG19-CBAM model achieved an overall recognition accuracy of 94.05% and an average confidence score of 92.82% on the current dataset. The average response time of the system was 2.3 s. The response time for simple question answering was about 1–2 s, while that for complex diagnostic report generation or long-text answering was about 5–6 s. These results indicate that the proposed method can connect disease image recognition, rule-based knowledge graph retrieval, and local diagnostic text generation in a lightweight deployment environment. The method provides a technical reference for auxiliary diagnosis of apple and cherry leaf diseases. The current work is still limited by dataset size, knowledge coverage, and field validation. Future work should supplement Neo4j node and relation statistics, real Cypher query examples, expert evaluation of generated diagnostic reports, and tests under complex orchard conditions.
+Key words: apple; cherry; leaf disease diagnosis; knowledge graph; retrieval-augmented generation; lightweight large language model

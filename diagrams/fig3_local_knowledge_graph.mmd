@@ -1,0 +1,31 @@
+graph TD
+    subgraph 核心节点[核心节点]
+        Disease[苹果黑星病<br/>Apple Scab]
+    end
+    
+    subgraph 关联实体[关联实体]
+        Crop[苹果<br/>Apple]
+        Symptom1[圆形浅褐色病斑]
+        Symptom2[黑灰色霉层]
+        Chemical1[代森锰锌]
+        Chemical2[苯醚甲环唑]
+        Treatment[摘除病叶+喷施杀菌剂]
+        Cause[越冬病菌+适宜温湿度]
+    end
+    
+    Disease -->|AFFECTS| Crop
+    Disease -->|HAS_SYMPTOM| Symptom1
+    Disease -->|HAS_SYMPTOM| Symptom2
+    Disease -->|RECOMMENDED_CHEMICAL| Chemical1
+    Disease -->|RECOMMENDED_CHEMICAL| Chemical2
+    Disease -->|TREATED_BY| Treatment
+    Disease -->|CAUSED_BY| Cause
+    
+    style Disease fill:#FF6B6B,stroke:#333,stroke-width:3px;
+    style Crop fill:#87CEEB,stroke:#333,stroke-width:2px;
+    style Symptom1 fill:#90EE90,stroke:#333,stroke-width:2px;
+    style Symptom2 fill:#90EE90,stroke:#333,stroke-width:2px;
+    style Chemical1 fill:#FFDAB9,stroke:#333,stroke-width:2px;
+    style Chemical2 fill:#FFDAB9,stroke:#333,stroke-width:2px;
+    style Treatment fill:#DDA0DD,stroke:#333,stroke-width:2px;
+    style Cause fill:#F0E68C,stroke:#333,stroke-width:2px;
